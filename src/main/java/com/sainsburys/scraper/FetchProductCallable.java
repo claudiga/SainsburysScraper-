@@ -2,6 +2,7 @@ package com.sainsburys.scraper;
 
 import java.math.BigDecimal;
 import java.util.Optional;
+import java.util.Properties;
 import java.util.concurrent.Callable;
 
 import org.slf4j.Logger;
@@ -24,9 +25,10 @@ public class FetchProductCallable implements Callable<Item> {
 		WebClient webClient;
 		Logger logger;
 		String url;
+		Properties xpaths;
 		
 		
-	public FetchProductCallable(DomElement product, Logger logger, String url) {
+	public FetchProductCallable(DomElement product, Logger logger, String url, Properties xpaths) {
 		
 		webClient = new WebClient();
 		webClient.getOptions().setThrowExceptionOnScriptError(false);
@@ -34,8 +36,14 @@ public class FetchProductCallable implements Callable<Item> {
 		this.logger = logger;
 		this.product = product;
 		this.url = url;
+		this.xpaths = xpaths;
 	}
 	
+	/**
+	 * I would've used reused the getPage funtion from ____ but its not thread safe
+	 * @param url
+	 * @return
+	 */
 	public HtmlPage getPage(String url) {
 
 		HtmlPage page = null;
@@ -66,7 +74,7 @@ public class FetchProductCallable implements Callable<Item> {
 
 		caloriesAndDescription = getCaloriesAndDescription(link);
 
-		HtmlDivision priceDiv = (HtmlDivision) product.getFirstByXPath(".//div[starts-with(@id,'addItem_')]");
+		HtmlDivision priceDiv = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("priceDivXpath"));
 
 		String unitPrice = priceDiv.asText().split("/")[0].replaceAll("[^0-9.]", "");
 
@@ -83,8 +91,7 @@ public class FetchProductCallable implements Callable<Item> {
 
 	public String[] getProductNameAndLink(DomElement product) {
 
-		HtmlDivision prodNameAndLink = (HtmlDivision) product.getFirstByXPath(
-				"div[contains(@class,'product')]/div[contains(@class,'productInfo')]/div[contains(@class,'productNameAndPromotions')]");
+		HtmlDivision prodNameAndLink = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("productNameAndLinkDivXpath"));
 
 		HtmlAnchor an = (HtmlAnchor) prodNameAndLink.getFirstByXPath("h3/a");
 		String link = an.getAttribute("href");
@@ -99,14 +106,14 @@ public class FetchProductCallable implements Callable<Item> {
 
 		HtmlPage page = getPage(url);
 		
-		HtmlDivision info = (HtmlDivision) page.getElementById("information");
+		HtmlDivision info = (HtmlDivision) page.getElementById(xpaths.getProperty("informationDivID"));
 
 		Optional<HtmlTable> tableOp = Optional
-				.ofNullable((HtmlTable) info.getFirstByXPath("//*/table[contains(@class,'nutritionTable')]"));
+				.ofNullable((HtmlTable) info.getFirstByXPath(xpaths.getProperty("NutritionTable")));
 		String calories = "-1";
 
 		HtmlDivision description = (HtmlDivision) info
-				.getFirstByXPath("productcontent/htmlcontent/div[contains(@class,'productText')]");
+				.getFirstByXPath(xpaths.getProperty("descriptionDivXpath"));
 
 		description = Optional.ofNullable(description).orElse((HtmlDivision) info.getFirstByXPath(
 				"//*/div[@id='mainPart']/div[contains(@class,'itemTypeGroupContainer productText')]/div[contains(@class,'memo')]"));
@@ -117,7 +124,7 @@ public class FetchProductCallable implements Callable<Item> {
 
 		if (tableOp.isPresent()) {
 			HtmlTable nutritionTable = tableOp.get();
-			HtmlTableRow tr = (HtmlTableRow) nutritionTable.getFirstByXPath("//*/tr[th[starts-with(.,'Energy')]]");
+			HtmlTableRow tr = (HtmlTableRow) nutritionTable.getFirstByXPath(xpaths.getProperty("energyTableRowXpath"));
 			String energy_per_kg = tr.getElementsByTagName("td").get(0).asText().replaceAll("[^0-9]", "");
 			calories = ScraperUtils.kjToKcal.apply(energy_per_kg);
 		} else {

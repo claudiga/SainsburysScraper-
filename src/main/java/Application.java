@@ -28,7 +28,7 @@ public class Application {
 		
 		String url = "https://jsainsburyplc.github.io/serverside-test/site/www.sainsburys.co.uk/webapp/wcs/stores/servlet/gb/groceries/berries-cherries-currants6039.html";
 		
-		String filePath = "xpaths.props";
+		String filePath = "xpath.props";
 		
 		FileInputStream fis = new FileInputStream(filePath);
 		

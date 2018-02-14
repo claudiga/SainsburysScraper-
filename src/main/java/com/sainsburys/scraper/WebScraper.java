@@ -3,6 +3,7 @@ package com.sainsburys.scraper;
 import java.math.BigDecimal;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 import java.util.Properties;
@@ -11,6 +12,10 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.function.BiPredicate;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,17 +71,35 @@ public class WebScraper implements ItemScraper<HtmlPage, DomElement> {
 	@Override
 	public Iterable<DomElement> getProductList(HtmlPage page) {
 		
+		if(!checkXpath()) {
+			
+			throw new UnableToGetItemException("An xpath property is missing");
+		}
 		
-		HtmlDivision productList = (HtmlDivision) page.getElementById("productLister");
+		HtmlDivision productList = (HtmlDivision) page.getElementById(xpaths.getProperty("productListDivID"));
 
 		HtmlUnorderedList prods = (HtmlUnorderedList) productList
-				.getFirstByXPath("//ul[contains(@class,'productLister gridView')]");
+				.getFirstByXPath(xpaths.getProperty("productListXpath"));
 
 		Iterable<DomElement> listOfProds = prods.getChildElements();
 
 		return listOfProds;
 	}
-
+	
+	/**
+	 * better to fail fast then fail later when we realise a property thats needed doesn't exist
+	 */
+	public boolean checkXpath() {
+		
+		Predicate<String> p = xpaths::containsKey;
+		
+		List<String> properties = Arrays.asList("productListDivID","productListXpath","productNameAndLinkDivXpath","priceDivXpath","informationDivID","NutritionTable","descriptionDivXpath","energyTableRowXpath");
+		
+		int size = properties.stream().filter(p).collect(Collectors.toList()).size();
+		
+		return properties.size() == size;
+	}
+		
 	@Override
 	public List<Item> getProductListings() {
 
@@ -91,7 +114,7 @@ public class WebScraper implements ItemScraper<HtmlPage, DomElement> {
 
 		listOfProds.forEach(product -> {
 
-			Future<Item> reference = executor.submit(new FetchProductCallable(product, logger, url));
+			Future<Item> reference = executor.submit(new FetchProductCallable(product, logger, url, xpaths));
 
 			results.add(reference);
 
@@ -110,6 +133,17 @@ public class WebScraper implements ItemScraper<HtmlPage, DomElement> {
 				e.printStackTrace();
 			}
 
+		}
+		
+		executor.shutdown();
+		while(!executor.isTerminated()) {
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException ignored) {
+
+			}
+			executor.shutdownNow();
 		}
 
 		return items;
