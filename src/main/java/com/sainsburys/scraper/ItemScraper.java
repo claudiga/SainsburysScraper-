@@ -12,6 +12,7 @@ public interface ItemScraper<T,E> {
 	
 	public <Item extends Scrapeable> List<Item> getProductListings();
 	
+	//public String[] getCaloriesAndDescription(String url);
 	
 
 }
