@@ -1,0 +1,8 @@
+productListDivID: productLister
+productListXpath: //ul[contains(@class,'productLister gridView')]
+productNameAndLinkDivXpath: div[contains(@class,'product')]/div[contains(@class,'productInfo')]/div[contains(@class,'productNameAndPromotions')]
+priceDivXpath: .//div[starts-with(@id,'addItem_')]
+NutritionTable: //*/table[contains(@class,'nutritionTable')]
+descriptionDivXpath: productcontent/htmlcontent/div[contains(@class,'productText')]
+energyTableRowXpath: //*/tr[th[starts-with(.,'Energy')]]
+

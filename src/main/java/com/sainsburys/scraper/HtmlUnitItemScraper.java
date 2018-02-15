@@ -1,20 +1,16 @@
 package com.sainsburys.scraper;
 
-import java.math.BigDecimal;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 import java.util.Properties;
-import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
-import java.util.function.BiPredicate;
 import java.util.function.Predicate;
-import java.util.function.Supplier;
+
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -22,26 +18,24 @@ import org.slf4j.LoggerFactory;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomElement;
-import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlDivision;
 
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.gargoylesoftware.htmlunit.html.HtmlTable;
-import com.gargoylesoftware.htmlunit.html.HtmlTableRow;
+
 import com.gargoylesoftware.htmlunit.html.HtmlUnorderedList;
 import com.sainsburys.exceptions.UnableToGetItemException;
 import com.sainsburys.product.Item;
 
-public class WebScraper implements ItemScraper<HtmlPage, DomElement> {
+public class HtmlUnitItemScraper implements ItemScraper<Item> {
 
-	Logger logger = LoggerFactory.getLogger(getClass());
+	private final static Logger logger = LoggerFactory.getLogger(HtmlUnitItemScraper.class);
 	final private String url;
 
 	final private WebClient webClient;
 	
 	Properties xpaths;
 	
-	public WebScraper(String url, Properties xpaths) {
+	public HtmlUnitItemScraper(String url, Properties xpaths) {
 		webClient = new WebClient();
 		webClient.getOptions().setThrowExceptionOnScriptError(false);
 		webClient.getOptions().setThrowExceptionOnFailingStatusCode(false);
@@ -50,7 +44,7 @@ public class WebScraper implements ItemScraper<HtmlPage, DomElement> {
 
 	}
 
-	@Override
+	
 	public HtmlPage getPage(String url) {
 
 		HtmlPage page = null;
@@ -68,7 +62,6 @@ public class WebScraper implements ItemScraper<HtmlPage, DomElement> {
 
 	}
 
-	@Override
 	public Iterable<DomElement> getProductList(HtmlPage page) {
 		
 		if(!checkXpath()) {
@@ -114,12 +107,10 @@ public class WebScraper implements ItemScraper<HtmlPage, DomElement> {
 
 		listOfProds.forEach(product -> {
 
-			Future<Item> reference = executor.submit(new FetchProductCallable(product, logger, url, xpaths));
+			Future<Item> reference = executor.submit(new FetchProductCallable(product, url, xpaths));
 
 			results.add(reference);
 
-			// items.add(item);
-			System.out.println("----------------------");
 		});
 
 		for (Future<Item> itemFuture : results) {

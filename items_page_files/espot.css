@@ -1,0 +1,3410 @@
+.search-spotlight-icon {
+  font-family: 'gol-font';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: 0.25em;
+  font-size: 1.8em;
+}
+.font-sans-regular {
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+}
+.font-sans-bold {
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
+.font-sans-italic {
+  font-family: Arial, sans-serif;
+  font-style: italic;
+  font-variant: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'SainsburysSlabRegular';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMedium/mary_ann_web-medium.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMedium/mary_ann_web-medium.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMedium/mary_ann_web-medium.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMedium/mary_ann_web-medium.svg#MaryAnnWebMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SainsburysSlabBold';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBold/mary_ann_web-bold.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBold/mary_ann_web-bold.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBold/mary_ann_web-bold.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBold/mary_ann_web-bold.svg#MaryAnnWebBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebBold';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBold/mary_ann_web-bold.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBold/mary_ann_web-bold.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBold/mary_ann_web-bold.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBold/mary_ann_web-bold.svg#MaryAnnWebBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebBoldItalic';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBoldItalic/mary_ann_web-bold_italic.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBoldItalic/mary_ann_web-bold_italic.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBoldItalic/mary_ann_web-bold_italic.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebBoldItalic/mary_ann_web-bold_italic.svg#MaryAnnWebBoldItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebExtraBold';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebExtraBold/mary_ann_web-extrabold.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebExtraBold/mary_ann_web-extrabold.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebExtraBold/mary_ann_web-extrabold.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebExtraBold/mary_ann_web-extrabold.svg#MaryAnnWebExtraBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebItalic';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebItalic/mary_ann_web-italic.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebItalic/mary_ann_web-italic.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebItalic/mary_ann_web-italic.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebItalic/mary_ann_web-italic.svg#MaryAnnWebItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebLight';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebLight/mary_ann_web-light.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebLight/mary_ann_web-light.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebLight/mary_ann_web-light.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebLight/mary_ann_web-light.svg#MaryAnnWebLight') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebLightItalic';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebLightItalic/mary_ann_web-light_italic.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebLightItalic/mary_ann_web-light_italic.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebLightItalic/mary_ann_web-light_italic.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebLightItalic/mary_ann_web-light_italic.svg#MaryAnnWebLightItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebMedium';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMedium/mary_ann_web-medium.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMedium/mary_ann_web-medium.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMedium/mary_ann_web-medium.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMedium/mary_ann_web-medium.svg#MaryAnnWebMedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebMediumItalic';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMediumItalic/mary_ann_web-medium_italic.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMediumItalic/mary_ann_web-medium_italic.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMediumItalic/mary_ann_web-medium_italic.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebMediumItalic/mary_ann_web-medium_italic.svg#MaryAnnWebMediumItalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaryAnnWebRegular';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebRegular/mary_ann_web-regular.eot');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebRegular/mary_ann_web-regular.eot?#iefix') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebRegular/mary_ann_web-regular.woff') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/MaryAnnWebFonts/Web Fonts/MaryAnnWebRegular/mary_ann_web-regular.svg#MaryAnnWebRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'gol-font';
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/gol-font/gol-font.eot?panbzt');
+  src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/gol-font/gol-font.eot?#iefixpanbzt') format('embedded-opentype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/gol-font/gol-font.ttf?panbzt') format('truetype'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/gol-font/gol-font.woff?panbzt') format('woff'), url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/font/gol-font/gol-font.svg?panbzt#gol-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+	font-family: 'Frontage-Regular';
+	src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/fonts/frontage/frontage-regular.eot');
+	src: url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/fonts/frontage/frontage-regular.eot?#iefix') format('embedded-opentype'),
+         url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/fonts/frontage/frontage-regular.woff2') format('woff2'),
+	     url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/fonts/frontage/frontage-regular.woff') format('woff'),
+	     url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/fonts/frontage/frontage-regular.ttf') format('truetype'),
+	     url('http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/fonts/frontage/frontage-regular.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="icon-"],
+[class*=" icon-"] {
+  font-family: 'gol-font';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.1em;
+  position: relative;
+  top: 0.15em;
+}
+.icon-offer:before {
+  content: "\e600";
+  color: #d32424;
+}
+.icon-offer-neg:before {
+  content: "\e601";
+  color: #d32424;
+}
+.icon-info:before {
+  content: "\e602";
+}
+.icon-info-neg:before {
+  content: "\e603";
+}
+.icon-idea:before {
+  content: "\e604";
+}
+.icon-idea-neg:before {
+  content: "\e605";
+}
+.icon-ctadown:before {
+  content: "\e606";
+}
+.icon-ctadown-neg:before {
+  content: "\e607";
+}
+.icon-cta:before {
+  content: "\e608";
+}
+.icon-cta-neg:before {
+  content: "\e609";
+}
+.icon-bullet:before {
+  content: "\e60a";
+}
+.icon-bullet-neg:before {
+  content: "\e60b";
+}
+.icon-chevron:before {
+  content: "\e60c";
+}
+.icon-chevron-neg:before {
+  content: "\e60d";
+}
+.icon-favourite:before {
+  content: "\e60e";
+  color: #ff9900;
+}
+.icon-favourite-neg:before {
+  content: "\e60f";
+  color: #ff9900;
+}
+.icon-tip:before {
+  content: "\e610";
+}
+.icon-tip-neg:before {
+  content: "\e611";
+}
+.icon-locate:before {
+  content: "\e612";
+}
+.icon-locate-neg:before {
+  content: "\e613";
+}
+.icon-warning:before {
+  content: "\e614";
+}
+.icon-warning-neg:before {
+  content: "\e615";
+}
+.icon-time:before {
+  content: "\e616";
+}
+.icon-time-neg:before {
+  content: "\e617";
+}
+.icon-van:before {
+  content: "\e618";
+}
+.icon-van-neg:before {
+  content: "\e619";
+}
+.icon-user:before {
+  content: "\e61a";
+}
+.icon-user-neg:before {
+  content: "\e61b";
+}
+.icon-close:before {
+  content: "\e61c";
+}
+.icon-close-neg:before {
+  content: "\e61d";
+}
+.icon-new:before {
+  content: "\e61e";
+  color: #00b9f2;
+}
+.icon-new-neg:before {
+  content: "\e61f";
+  color: #00b9f2;
+}
+.icon-magnify:before {
+  content: "\e620";
+}
+.icon-magnify-neg:before {
+  content: "\e621";
+}
+.icon-halloween:before {
+  content: "\e622";
+}
+.icon-halloween-neg:before {
+  content: "\e623";
+}
+.icon-halloween-solo:before {
+  content: "\e624";
+}
+div.limitToOneRow {
+  overflow: hidden;
+  position: relative;
+}
+div.es {
+  font-family: Tahoma, Sans-Serif;
+  float: left;
+}
+div.es-border {
+  border: 1px;
+  border-style: solid;
+}
+div.es-rounded {
+  -moz-border-radius: 5px;
+  -moz-border-right-radius: 0;
+  -webkit-border-radius: 5px;
+  -webkit-border-right-radius: 0;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  border-right-radius: 0;
+}
+div.es-panel-rounded {
+  -moz-border-radius: 4px;
+  -moz-border-right-radius: 0;
+  -webkit-border-radius: 4px;
+  -webkit-border-right-radius: 0;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  border-right-radius: 0;
+}
+div.es-border-box-100 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+div.es-border-box {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  border-bottom-color: currentColor;
+  border-left-color: currentColor;
+}
+div.es-border-box img {
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  border-bottom-color: currentColor;
+  border-left-color: currentColor;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+}
+div.es-border-box p {
+  max-width: 100%;
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-top-color: currentColor;
+  border-right-color: currentColor;
+  border-bottom-color: currentColor;
+  border-left-color: currentColor;
+}
+div .es-promotion-image-link {
+  float: left;
+  clear: none;
+}
+div a.es-promotion-link {
+  float: left;
+  clear: both;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 120%;
+  text-decoration: none;
+}
+div.es-clear-left {
+  clear: left;
+}
+div.es-clear-right {
+  clear: right;
+}
+div.es-clear-both {
+  clear: both;
+}
+div.es-faq-accordion p {
+  margin-bottom: 0px;
+  max-width: 100%;
+}
+div.es-faq-accordion-title p {
+  margin-top: -5px !important;
+  line-height: 38px;
+}
+div.es ol {
+  list-style-type: decimal;
+  line-height: 1.1em;
+}
+div.es ul {
+  list-style-type: disc;
+  line-height: 1.1em;
+}
+div.es input {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+div.es .es-neutral-bg {
+  background-color: #ededed;
+}
+div.es .es-beige-bg {
+  background-color: #fff6e5;
+}
+div.es .es-mushroom-bg {
+  background-color: #f2ebe5;
+}
+div.es .es-faded-yellow-bg {
+  background-color: #fffad2;
+}
+div.es .es-powder-light-bg {
+  background-color: #e0def0;
+}
+div.es .es-pink-bg {
+  background-color: #ffeeed;
+}
+div.es .es-medium-grey-bg {
+  background-color: #656565;
+}
+div.es .es-orange-bg {
+  background-color: #ff9900;
+}
+div.es .es-grape-bg {
+  background-color: #781d7e;
+}
+div.es .es-plum-bg {
+  background-color: #990033;
+}
+div.es .es-basil-bg {
+  background-color: #669900;
+}
+div.es .es-black-bg {
+  background-color: #000000;
+}
+div.es .es-white-bg {
+  background-color: #ffffff;
+}
+div.es .es-transparent-bg {
+  background-color: transparent;
+}
+.es-text-link{/*new 2016*/
+    font-weight: 600;
+    color: #ff9900;  
+    text-decoration: none;
+}
+div.es .es-neutral {
+  color: #ededed;
+}
+div.es .es-beige {
+  color: #fff6e5;
+}
+div.es .es-mushroom {
+  color: #f2ebe5;
+}
+div.es .es-faded-yellow {
+  color: #fffad2;
+}
+div.es .es-powder-light {
+  color: #e0def0;
+}
+div.es .es-pink {
+  color: #ffeeed;
+}
+div.es .es-medium-grey {
+  color: #656565;
+}
+div.es .es-orange {
+  color: #ff9900;
+}
+div.es .es-grape {
+  color: #781d7e;
+}
+div.es .es-plum {
+  color: #990033;
+}
+div.es .es-basil {
+  color: #669900;
+}
+div.es .es-black {
+  color: #000000;
+}
+div.es .es-white {
+  color: #ffffff;
+}
+div.es .es-red{color:#D32424;}
+div.es .es-grey{color:#3D3D3D;}
+div.es .es-burgundy{color:#6F1F44;}
+div.es .es-blue{color:#246CB5;}
+div.es .es-green{color:#289F5D;}
+div.es .es-neutral-bc {
+  border-color: #ededed;
+}
+div.es .es-beige-bc {
+  border-color: #fff6e5;
+}
+div.es .es-mushroom-bc {
+  border-color: #f2ebe5;
+}
+div.es .es-faded-yellow-bc {
+  border-color: #fffad2;
+}
+div.es .es-powder-light-bc {
+  border-color: #e0def0;
+}
+div.es .es-pink-bc {
+  border-color: #ffeeed;
+}
+div.es .es-medium-grey-bc {
+  border-color: #656565;
+}
+div.es .es-orange-bc {
+  border-color: #ff9900;
+}
+div.es .es-grape-bc {
+  border-color: #781d7e;
+}
+div.es .es-plum-bc {
+  border-color: #990033;
+}
+div.es .es-basil-bc {
+  border-color: #669900;
+}
+div.es .es-black-bc {
+  border-color: #000000;
+}
+div.es .es-white-bc {
+  border-color: #ffffff;
+}
+div.es .es-transparent-bc {
+  border-color: transparent;
+}
+.productLister.gridView .spotlight .strapline,
+.productLister.listView .spotlight .strapline {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 6px 4px 5px;
+  font-size: 1.65em;
+  height: 50px;
+  margin-top: -0.5em;
+}
+.productLister.gridView .spotlight .strapline:before,
+.productLister.listView .spotlight .strapline:before {
+  font-family: 'gol-font';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: 0.25em;
+  font-size: 1.8em;
+  color: #246cb5;
+  content: "\e620";
+}
+.productLister .specialOffer .strapline {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 6px 4px 5px;
+  font-size: 1.65em;
+  margin-top: -0.5em;
+  height: 50px;
+}
+.productLister .specialOffer .strapline img {
+  display: none;
+}
+.productLister .specialOffer .strapline a {
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebBold';
+  color: #d32424;
+  font-weight: 200;
+  text-decoration: none;
+  display: block;
+}
+.productLister .specialOffer .strapline a:before {
+  font-family: 'gol-font';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  top: 0.25em;
+  font-size: 1.8em;
+  content: "\e600";
+}
+.productLister .specialOffer .strapline a:after {
+  content: 'Offer';
+  margin-left: 3px;
+}
+#propsFormDiv p,
+#tinymce p {
+  max-width: 100%;
+}
+.eSpotContainer div.es.es-border-box div.es-border-box-100 div.es-border-box {
+  pointer-events: none;
+  filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/css/www.sainsburys.co.uk/wcassets/www/Homepage/spacer_975x8px.png', sizingMethod='scale');
+}
+/*Below allows the arrows within the carousel to be clickable*/
+.eSpotContainer div.es.es-border-box .es-border-box-100 div.es-border-box-100 div.es-border-box,
+.eSpotContainer div.es.es-border-box .es-border-box-100 div.es-border-box-100 div.es-border-box {
+  pointer-events: inherit;
+}
+.eSpotContainer.bottomESpots div.es.es-border-box div.es-border-box-100.es-transparent-bg div.es-border-box-100 div.es-border-box,
+#greatOffersPage div.es-border-box-100 div.es-border-box, .es-border-box-100.es-grape-bg div.es-border-box-100 div.es-border-box  {
+  pointer-events: none;
+  filter: progid: DXImageTransform.Microsoft.AlphaImageLoader(src='http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/css/www.sainsburys.co.uk/wcassets/www/Homepage/spacer_975x8px.png', sizingMethod='scale');
+}
+.es .flush-center {
+  text-align: center;
+}
+.es .speech-marks {
+  font-style: italic;
+  font-weight: 200;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+.es .speech-marks:before,
+.es .speech-marks:after {
+  font-style: normal;
+  display: inline-block;
+  font-size: 2.2em;
+  font-family: 'MaryAnnWebLight';
+  font-weight: 600;
+  position: relative;
+  top: 0.375em;
+  padding: 0 0.1em;
+  line-height: 0;
+}
+.es .speech-marks:before {
+  content: open-quote;
+}
+.es .speech-marks:after {
+  content: close-quote;
+}
+.es .center-container {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  z-index: 0;
+}
+.es .center-container .inner {
+  width: 632px;
+  position: absolute;
+  display: block;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  height: 100%;
+}
+.es .center-container:after {
+  content: '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ';
+  visibility: hidden;
+}
+.es .col-single {
+  width: 100%;
+}
+.es .col-quarter {
+  width: 25%;
+}
+.es .col-three-quarter {
+  width: 75%;
+}
+.es .col-third {
+  width: 33.33%;
+}
+.es .col-two-third {
+  width: 66.66%;
+}
+.es .col-half {
+  width: 50%;
+}
+.es .col-fifth {
+  width: 20%;
+}
+.es .col-two-fifth {
+  width: 40%;
+}
+.es .col-three-fifth {
+  width: 60%;
+}
+.es .col-four-fifth {
+  width: 80%;
+}
+.es .col-sixth {
+  width: 16.66%;
+}
+.es .col-five-sixth {
+  width: 83.33%;
+}
+.es h1,
+.es h2,
+.es h3,
+.es h4,
+.es h5,
+.es h6,
+.es p {
+  margin: 0;
+  margin-bottom: 0.5em;
+}
+.es h1 {
+  font-size: 3em;
+  line-height: 1.06em;
+  margin-bottom: 20px;
+  color: #3d3d3d;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+  font-weight: normal;
+}
+.es h2 {
+  font-size: 2.8em;
+  line-height: 1.07em;
+  margin-bottom: 15px;
+  color: #3d3d3d;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+  font-weight: normal;
+}
+.es h3 {
+  font-size: 2.2em;
+  line-height: 1.2em;
+  margin-bottom: 0;
+  color: #3d3d3d;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+  font-weight: normal;
+}
+.es h3.hero {
+  font-size: 3em;
+  margin: 0 0 .2em;
+}
+.es h3.hero.white {
+  color: #ffffff;
+}
+.es h3.content-hero {
+  font-size: 3em;
+  margin: 0 0 .2em;
+}
+.es h3.content-hero.white {
+  color: #ffffff;
+}
+.es h3.content-service-info {
+  font-size: 1.8em;
+}
+.es h3.content-service-info {
+  font-size: 1.8em;
+}
+.es h3.content-value {
+  color: #d32424;
+}
+.es h4 {
+  font-size: 2em;
+  line-height: 1.05em;
+  margin-bottom: 5px;
+  color: #3d3d3d;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+  font-weight: normal;
+}
+.es h5 {
+  font-size: 1.8em;
+  line-height: 1.11em;
+  margin-bottom: 5px;
+  color: #3d3d3d;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebBold';
+  font-weight: normal;
+}
+.es h6 {
+  font-size: 1.6em;
+  line-height: 1.19em;
+  margin-bottom: 5px;
+  color: #3d3d3d;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebBold';
+  font-weight: normal;
+}
+.es p.hero {
+  font-size: 1.7em;
+  letter-spacing: 0.007em;
+  line-height: 1.6em;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+}
+.es p.content-hero {
+  font-size: 1.7em;
+  letter-spacing: 0.007em;
+  line-height: 1.6em;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+}
+.es p.intro {
+  font-size: 1.6em;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+}
+.es p {
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  color: #333333;
+  font-size: 1.3em;
+  line-height: 1.4;
+  margin-bottom: 0.9em;
+}
+.es li {
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  color: #333333;
+  font-size: 1.3em;
+  line-height: 1em;
+  margin-bottom: 0.9em;
+}
+.es img.hero,
+.es img.content-hero {
+  position: relative;
+  top: 5px;
+  margin-right: 10px!important;
+}
+.es img.service-info,
+.es img.content-service-info {
+  position: relative;
+  top: 3px;
+  margin-right: 8px!important;
+}
+.es .value img.value,
+.es .content-value img.content-value {
+  margin-right: 8px;
+  position: relative;
+  top: 2px;
+}
+.es .value {
+  color: #d32424;
+}
+.es .content-value {
+  color: #d32424;
+}
+.es .white-text {
+  color: #ffffff;
+}
+.es .btn {
+  /*height: 40px;
+  line-height: 40px;
+  background-color: #b9005c;*/
+  font-size: 1.8em;
+  color: #ffffff;
+  /*font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+  padding: 0 75px;*/
+  display: inline-block;
+  border: 0;
+  -webkit-border-radius: 1.25em;
+  -moz-border-radius: 1.25em;
+  border-radius: 1.25em;
+  margin-bottom: 0.5em;
+  text-decoration: none;
+
+    
+/*updated to lunar styles - hidden above is old button styles - TP*/        
+    margin: 13px auto 0pt;
+    display: table; 
+    font-family: MaryAnnWebRegular,helvetica,sans-serif; 
+    padding: 0pt 56px; 
+    background: #910048; 
+    height: 31px ! important; 
+    line-height: 30px ! important;}
+}
+.es .btn:hover {
+  background-color: #ec0075;
+}
+.es .btn.ontop {
+  margin-top: -75px;
+}
+.es .btn.smaller {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 55px;
+  font-size: 1.2em;
+}
+.es .btn.smaller.ontop {
+  margin-top: -55px;
+}
+.es .btn.deactive {
+  color: #777777;
+  background-color: #f9deeb;
+}
+.es .btn.deactive:hover {
+  background-color: #fbe7f0;
+}
+.es .btn.grey {
+  color: #333333;
+  background-color: #cccccc;
+}
+.es .btn.grey:hover {
+  background-color: #e6e6e6;
+}
+.es .btn.dgrey {
+  color: #cccccc;
+  background-color: #333333;
+}
+.es .btn.dgrey:hover {
+  background-color: #e6e6e6;
+}
+.es .btn.grey.deactive {
+  color: #777777;
+  background-color: #e0e0e0;
+}
+.es .btn.grey.deactive:hover {
+  background-color: #e6e6e6;
+}
+.es .btn.white {
+  color: #333333;
+  background-color: #ffffff;
+}
+.es .btn.ghost {
+  color: #b9005c;
+  border: 1px solid #b9005c;
+  background-color: #ffffff;
+}
+.es .btn.ghost:hover {
+  color: #ec0075;
+  border: 1px solid #ec0075;
+}
+.es a:hover .btn {
+  background-color: #ec0075;
+}
+.es .gol-ideas {
+  max-width: 847px;
+  width: 100%;
+}
+.es .gol-ideas.competition .header {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+.es .gol-ideas.competition .header.small {
+  height: 250px;
+}
+.es .gol-ideas.competition .header img {
+  position: absolute;
+  display: block;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  height: 100%;
+}
+.es .gol-ideas.competition .header:after {
+  content: '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ';
+  visibility: hidden;
+}
+.es .gol-ideas.competition .intro {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 3em 10em 1.5em;
+}
+.es .gol-ideas.competition .intro h2 {
+  color: #333333;
+}
+.es .gol-ideas.competition .intro p {
+  font-size: 1.6em;
+}
+.es .gol-ideas.competition .intro small {
+  width: 50%;
+  display: block;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  color: #777777;
+  margin-bottom: 0.9em;
+}
+.es .gol-ideas.competition .intro ul {
+  list-style-type: none;
+}
+.es .gol-ideas.competition .intro ul li:before {
+  content: "- ";
+}
+.es .gol-ideas.competition .intro ol {
+  list-style-type: none;
+  counter-reset: list-counter;
+}
+.es .gol-ideas.competition .intro ol li:before {
+  counter-increment: list-counter;
+  content: counter(list-counter) '. ';
+}
+.es .gol-ideas.competition .steps {
+  background-color: #ffffff;
+  padding: 5em 0;
+  border-top: 1px solid #ff9900;
+}
+.es .gol-ideas.competition .steps h1,
+.es .gol-ideas.competition .steps h2,
+.es .gol-ideas.competition .steps h3,
+.es .gol-ideas.competition .steps h4,
+.es .gol-ideas.competition .steps h5 {
+  text-align: center;
+  margin-bottom: 0.6em;
+}
+.es .gol-ideas.competition .steps ol {
+  list-style-type: none;
+  counter-reset: steps-counter;
+  padding: 0;
+  overflow: auto;
+  clear: both;
+}
+.es .gol-ideas.competition .steps ol.steps-3 li {
+  width: 33.333%;
+  float: left;
+}
+.es .gol-ideas.competition .steps ol.steps-4 li {
+  width: 25%;
+  float: left;
+}
+.es .gol-ideas.competition .steps ol li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 4.4em;
+  font-size: 1.4em;
+  line-height: 1.1em;
+}
+.es .gol-ideas.competition .steps ol li:before {
+  counter-increment: steps-counter;
+  content: counter(steps-counter);
+  color: #ffffff;
+  background-color: #ff9900;
+  width: 1em;
+  height: 1em;
+  line-height: 1em;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  text-align: center;
+  margin-left: -2.5em;
+  padding: 0.3em;
+  margin-right: 1em;
+}
+.es .gol-ideas.competition .editorial {
+  background-color: #f2ebe5;
+  padding: 1.5em 0;
+  overflow: auto;
+}
+.es .gol-ideas.competition .editorial.white-bg {
+  background-color: #ffffff;
+  padding: 1.5em 0 3em 0;
+}
+.es .gol-ideas.competition .editorial.transp-bg {
+  background-color: transparent;
+}
+.es .gol-ideas.competition .editorial p {
+  font-size: 1em;
+}
+.es .gol-ideas.competition .editorial ul {
+  width: 632px;
+  margin: auto;
+}
+.es .gol-ideas.competition .editorial li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  overflow: auto;
+  background-color: #ffffff;
+  margin-bottom: 2em;
+  list-style-type: none;
+}
+.es .gol-ideas.competition .editorial li .container {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.es .gol-ideas.competition .editorial li img {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.es .gol-ideas.competition .editorial li .container {
+  width: 50%;
+  padding: 1.5em;
+}
+.es .gol-ideas.competition .editorial li:nth-last-child(1) {
+  margin-bottom: 0;
+}
+.es .gol-ideas.competition .editorial li:nth-child(even) .container {
+  float: right;
+}
+.es .gol-ideas.competition .editorial li:nth-child(even) img {
+  width: 50%;
+  float: left;
+  padding: 0 1.5em 0 0;
+}
+.es .gol-ideas.competition .editorial li:nth-child(odd) img {
+  width: 50%;
+  float: right;
+  padding: 0 0 0 1.5em;
+}
+.es .gol-ideas.competition .hero {
+  overflow: auto;
+}
+.es .gol-ideas.competition .hero a {
+  text-decoration: none;
+  margin: 1em;
+  display: block;
+  background-color: #ffffff;
+}
+.es .gol-ideas.competition .hero a:hover {
+  text-decoration: none;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.1);
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+}
+.es .gol-ideas.competition .hero p {
+  font-size: 1em;
+}
+.es .gol-ideas.competition .hero ul {
+  width: 632px;
+  margin: auto;
+}
+.es .gol-ideas.competition .hero li {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.333%;
+  float: left;
+  background-color: transparent;
+  text-align: center;
+  margin-bottom: 0;
+  list-style-type: none;
+  overflow: auto;
+}
+.es .gol-ideas.competition .hero li .container {
+  width: 100%;
+  padding: 1.5em;
+}
+.es .gol-ideas.competition .hero li:nth-last-child(1) {
+  margin-bottom: inherit;
+}
+.es .gol-ideas.competition .hero li:nth-child(even) .container,
+.es .gol-ideas.competition .hero li:nth-child(odd) .container {
+  clear: both;
+  float: none;
+}
+.es .gol-ideas.competition .hero li:nth-child(even) img,
+.es .gol-ideas.competition .hero li:nth-child(odd) img {
+  padding: 1em;
+  width: 100%;
+  margin: auto;
+  height: auto;
+}
+.es .gol-ideas.competition .videos {
+  padding: 1em 0;
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+}
+.es .gol-ideas.competition .videos img {
+  position: absolute;
+  display: block;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  height: 100%;
+}
+.es .gol-ideas.competition.nectar .header {
+  background-color: #491c5d;
+  border-bottom: 9px solid #b92f92;
+  position: relative;
+  height: 250px;
+}
+.es .gol-ideas.competition.nectar .header .container {
+  width: 847px;
+  padding: 70px 0 0 150px;
+  overflow: auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  height: 250px;
+  background-repeat: no-repeat;
+  background-position: 320px 55px;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEwAAABDCAYAAAA2weP+AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDIxIDc5LjE1NTc3MiwgMjAxNC8wMS8xMy0xOTo0NDowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo0MThiNzE2Yi1kNzViLTRhM2ItOGYyZC00MWU5YzU2MDA1YTYiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTM5M0ZFRDc3Q0ExMTFFNTgyNEU4Q0IzRjJGRTZCNzMiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTM5M0ZFRDY3Q0ExMTFFNTgyNEU4Q0IzRjJGRTZCNzMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo1ZTRmNTMzNi04MjkxLTRkMGYtYjhkMi02NTUxNzE1NzRlYWQiIHN0UmVmOmRvY3VtZW50SUQ9ImFkb2JlOmRvY2lkOnBob3Rvc2hvcDpiZDU0ZDNmZi05YjJjLTExNzgtYWQ2NS04Njc0MmRiMTA2ZjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz6rmhHAAAAaH0lEQVR42uRcCZgU1Z3/v6q+75mei5lmOAYQEQGBLOCBIGoSNcqadXVNNCYm6+bTeHzGT1ezR76o+T5jYtbVZE124xXXFYwZFPFABZHIcAzIDcNwTsOcPT3T03d31dv/e6+qq/oYwE1i1C2/56uuqa569avf//c/3msIfILbwhVhYqPgrpVjzfNsu8+pU/un+/LRBpcSr7XTjJeois1C8zJQClmw5lSQlDxYhpLE1RuTA+F+uWbfbjp5ywEIda25KpSFv8BG/tw3uGRF2LvItWPhgtyGm0KxjvO9se4aayJmkR1WsDcGQK52gWS3ANgkABmHQ/QhUQCFAs2qoAwnIXd8CDLdMYYl5J0eJeaq6+9xT1i/2zn9P16WLluzZmlI/cwCdnFr2Hmpp/3Kxcl372qM7DnHORyxOSfWgVznAuK2AXHIQKwIkEUARCj2KhVfZo/NQLPouFGtoxxDdh5FINV4FlI7T0D6yCBkPVXZHt+kj3Z6Z9/7rWvuXPuZAWzpqwfrbnS99s+z+9fe4O0+4nOf2QBSnRskD4LksSMOiAJrDA3KegSNgYWNqogUVQVAar7QKGW9gqAqYrg2bJKElyH8I+UAqpDZ1wvx9uOQ9NfHDwTO+eVWx4wH7vvbb+Y+lYB9qTVc+z3Xb38y+8Tb1ztHYlbnzEaQapwg+ZBRFjc+oAvPcmKP+3I1NptgEgdHEcCoOQGSgtKEyoW2iLaX5T1lx1TW2DkZsY90IxbNjK2CsZQg89J5iL25F9JZa76zavZvR2zOW6644efZTwVgaHr2b3pev29x9yv3Ofv7Ha7ZIZDGeUG2+5BEAQDHROxrkFmypk3EMDONORwsJSfAUBhweSCKBqCigcRBzOGxrHZMNA4kzQGRGGnxfxKaN9NDO/MbCsRWH4BUVM3tDc575OKbn/zBXxSw+1ev+cKNiWeWB/duGeed2QzylCDIziASaRwQ50TN9Cps3OwU0RStR+CoboIMREU3yRwHih/Pa6CagCwwT8mIF8BMlTEOG7HgS/JYETgVor/fCcOkerDDP+PSy25+vP0TBWxxa1j6e8/Kf77o0PM/cKqK7Fg4FmTfGNSoaSjmjUKXKiOlAaUWmMX2OUAaaHqjhX3dTBkLDV0TgJmZaWIeY6+smSoyTkJzBa8VctE4DL2+nx6umf3cgltfuOkTAezS1rD/Ifujq8Ztfftc77QQWGegCfrOAOKdin+VR/8iZ1XeYBYDpWCSxYAZAOrAqho4xr4ATWOeYmIigqZrIZEM0DhwLisyzgJDK/fAQCZwfMTpmz731tahPxtg16/cM+5f8j9eX7Vtc8i3YAJYz5wKpOav0AS8J/kWLQaLmREHzdAvwTSTVywCMW8AxsIODg5ox1RubtysdbARNMK0TgeRaZoe23EzRZP12yEdHoToht7c4cDU8y647cXNf3LA7n5r/fQ7hh5Z79x/0O87fzxYpswGKThndJ0qgJU3GnsAqgjAOEg5o1fyBYCoflwxQKOFMEMHSOwL1lGtMRAlASw/TzuXKYSsOQS2j8yTvDZQ0SAGlu+kx/xTr5131yvL/2SAMbDujDy8wdl51ONlYE1dCFLVNFNEXmlTi8FiIHAgFAEINQOlgyl6aorBdOEXxzRwKDVA0gNZ1XRMayy4Bb2xEyVJM08QJooBNHgtMPDiNjjom3HLeXct+9UfDdj33tjQfM/wwzucew74vedOAMvZCzGMmn4KsJRikLgJin2uWzRrMkUdyFxB5KkOpMZIzhYqQhGqx24cNDD6U4KmimOaafKe4edE0PxWiCzbDmHnhG/Muef15/7PgF3SGvY9od63w9/eNi4wrwUs02aA3HQBCF6fBCz2oJAVoIEGBBVunwtygWFZA6jCvmZ+HGRaAEpnkh7DlQGnGvtlwCkiE4A8S0JV8cSSDhpjmpV70YGXd9Bue/Pic+598/2PDRirKjwsP/7a5LbfX+47aywyC02x5cpTaJbOChNg1OgFENpnFq3rzFOzpjRI0bTPBFTRfnFP6eiM48AqBmiMZZSBllPENSQoMI6bJ8Zsvct2KiM234SpD2zoGu0pK9Ll245V35+yfeXl7qYakFuCIIUWnxwsbjpZDQgtkFRFo0oKwWLHU9jSeCwpGMd6Jal9J8PZKSxd5Ij8AzE0p1JjZCf6Zx6w4gGW1LPKhw3TJbvRADMAvu+wiPN0c0XW0Ti+uEQe6pZOk+357I7ef5oy6sOW/eGGlTsmXNx1+48kfOmWcQGMs5pBsgdOAZYGDktTGJtoVmNTTus1FmmmKQJMTfBLKc8SapaQMxoQsxFQDUwqEvaCgRABNDV5Z70rmCYIHUOGUQSIWNH5ZPBLGUWYLHuGJI7dY4O6uTWBg9sCbwF0LDklw1gUf3v+Vy9Kh8J292RWaQhirHXW6CJfACstWKSkOaOg0JBBedbYfkL07DOeVwQWLQdNMMyEi4lFhCXbnEEaa9i+Q28W0ZxaYwGrC3vUKoJmJ7nFvqig2Lj35BWPDEpCKg/2MT5otPVdtONHF156SsAucOy7Yty+9+fZXC6QmrA5qvGmgdGjd25yCFI+XQJQQrSc8ZnivjDPnKY9plZJXLlFEm5yhIHEgk40NwaOMDmT+XGTMxo3OzxOJSKcQE7zkqwkxIDDOIyg0BMftoBdFDB10JB1/iVngD872Npz/yR5VJO8qDVsvXb4vp+psRQ4JjXhAB0IpwMHXUHm2BMrQp+AgaWmhUYpmh5hEymKyTQJNfQJUaImZEhFV6RrWQW2mb9BhbmpwxlQwyOgDqYFQBRMDkTzrmDsM3bKk/0oOXagDPgRqQAYyw6qWnzOg131jwF03l4RsIX2PV+p2b21hT8WewsMKHYTZBIpAwtZlUsIViGDKAJGVF3ctXoV79HsiObKqaY/Zc4Z76GZfAELUgKIVnUdHrDCvi0emH1hFOR8FgGKgxpNGyGHPj5mulS7WAE4Im5PxT5Fb5nfPci/S/w2zF6q8QZ4PItjzqrgOnsM1B3YdSuy7N6GhztTRYAx7bos+fB9NJEFidGf0ZynF8iUeB9esEm7ucp1iGbjhqkpwvOJ2lTG8JSgljCEGkDpwl0Qa2pImQkg8/4v758MB7aLvHWqvQNcjpyhdzIxSSExzLxwHWIKScQ+0Y8xXozkILelB6RaN8hVDnzPqM1ZAt5J1dLBsOtxZNl3igBD45vUfLx9NtuXLVYusDyBZRo0FEbskKY2t5avMc3SxTspzJFpmdbz4FXTH4NN1NSbjlGz6JeYjx6tp1Dz+lIwcNRw6DyhtpRLBaElXlIHj1uK6Z5qMYBEe4HqQBJbAtkW5OGG48x6qD24/yZk2S3IMrUA2FL7e9dB36Bsnq3hbErHUTgjImWx6nqm8sonUTWPWCgZ5w1GMcBZCRn/y6QksLtUAzQ90AQj0DRPcIiZInT7qEXMa5miB2PTioSVnREpNk8NOKKZIgdPgmLgJDEJIx6PQL5jEOQpAa4mDo9sOZxv+Rqy7HkO2KIVYXlW/MeX6zqQz+VFNIxCug314qOtNdDQnAeXNwc7NnmgJ2zjNwvWZ2DGFwZh8eWDYLFpN+WVFwk+fLMeNr1XC93HnPiZIGspjG1JwPxL+mDuhf2GluA9VYyNdm6sho1r6+H4UTdk0jLY7QpUV6Vg4sQoLDi3C6qq0kWIvfgSpmmSGG/L5EE4//wuiEYdsGVzIxw5HIChIQcMx+zAXlsgkIEzpgzA4kWHwO3KctD27q2FzVtCEKxKQFUgBdt3jYGeXi8fq9+Xglu+9iF4DwyB1OwF1xn14Nse+yHeSgBmpVDbENk7zYgW0ONg5MuEv6/XBbs/qsJW/iJPHHVia4J9O3xw6wO7QLII8X72sUmwa3N1cYaZJ3Bkv4e3w7vccM2NHVpBQ4GXn5kMG9uais7P5WSIx21wrMsP3kAWFl54rOjv+/bWFPad7jyfQdrS3gSr355QNs7eXgs2N+zaXQd33LERnI4sRKJu2L23riJB+yMetEaRDTCngoYKvlxk/IcPXWY994FVOckOEHIMR9zmL6VODIIaywr3XLKxty/Lhlc60uGF7ZuCnDHbP6wuAisQzMBZsyJQFUwXjjEmHd1qA7UnAbvW+4vAYrLncOSLrk/0etZoZQKipUQlwTW7jiQZ1xkcdELbxpBWGyu/jM3GnkstNnlWdMQBWOwWkpfsSznDGqXeMZBKF90tl0pD+mgEaNKIxs+e1Q9XXdsJ/mCWm91Lz5wBW9vEW+rc5YWZM7vhoz9UFc6vqk7D9+9pw9gyB1mUukceXQixETv/2+FDARjbNAQfbmwunD+xJQpfv3EXeP14fRSZvj4X7Ecm1dSly/Tq/gfbwOEUY7PIIoyobUjBF684DFOmRWHMmARYbazyQWD1qvGw+o3x/NxDh6vgIstRkX9q25QpEfjq1Xugyp/k53d1+cCN8sPvqQr9s3oc4EuM3IofllvGSd0NLL8q3TIjCchEYoXP9f4h8CrDQAdE9D2pua8AWCKC9O1PQU+XyxjIuD6wJBI82rZic7uzBcAYICqR4fBhA+Crr9mP5pcTFVEca0MoBQ1ju0w0A5MZquB0qSbWSTB7fn/B5SZGrDgWN+/NbEokbGVsrK9HHavJ8Got85bN44a1/FPMczLBld0O8AwPnc1fkIskfQWvVSmi17bswAikOxAEB6YSVguoEcPMlBR6zmgGUknD9dvRJIbiThgeQaZ0ogPoMWr/jaERiMUdkM+Lp7FaVahvShVqVHrsRsxBbKmXtJCyoW5c1wDr3m6Cvh5X5TqwSoyJkQLWou5PdU+sB9jYiJiUB9ljB2c+6uOAYXwijyYN5jfBZmEkScbriwyAmDVDqyvlFeN1rtswkbfSbRJ6tSlTh6Cnz5BNtydXqIQSyZQKmVMiM2IWTbdM26pl42HNqqZT1ktJKWD6BIl2Px7iECOU4X/GNMpCFMuTTz7osCSoO6nVVE5aVpQQMIvNarwhUpz7CV0YvXQdDKZgztxuWLTkKC+tWWym0mNeMmZ3pBKwCKkQh7HzDRmJo+m9/2aj8VLOHIapM6Lgr8oi62V45bkW47nYd0vGXihbM1apFQsoPEF3qJlqyyF1QpRVAliwWJz7SkUsIrJszL4ULUsyzMRuz0M6I8xy+lm9cO6CLi7ibOBOl1JUDHT7DIeSiFu5K7fYVKN8XHjDpOw9kJLA9fgxjzA3pklo2v/wwB7Qk6XjR9xl4yw1ST5BQkqZRQoaxoG0ypCVnVXSEPUMU5tdLTZFyTCNgknqVU5T1ROK61VeT6ZwyIoPP2lKFOrHJFGkFaMiqs1Ku7158AcyBf3ZvrXWmLGWxUthZZ1MzlJmfgqVTddi4mz83eURcVnBbGVSzqaSsfN7mau22veIaSKYkSqQGwxaMEuMj/gbR7zxTn8hN+YmJovZY3MZpqhEXCJ4eKx57DCET/j5oZ0762EyAtY0Ns4DWsY85qUiERfMmd+H4UkGzp4TgfXvClN6+dlJXKxrG9M82j9xzA37tgdg0Ve6YeHlPQiEAtEBcbvWZ8fBlJkxTLtkmLuoH+qa00Vx4WsvjIf6UBL6Tzhg6/qaEnBKYrrCTBIrrBBz4cnIetnfLDJL9mwWDE/7t9Z9sf3C450XGaYocc0qFvaS2jopf0vnn3cUNm4ZC4pCuC4te2laRT0LTUyAvy4Hi68IQ/uGOu5dc1kJ3n0tNEpgSmD6/Cial/B+29YHeeOmP38YgmMyMOnsEejc6eVsXftaw+hzPpWsw6xhmmc06yYHDVPFtN0lYVgJJ96wXvk2uBxU9wrcI6JmSSZTICcBjGhaUFOXguuv38GzgZNtiaSoiPiDefjW3fugujYzahDv9uc5K5Z8tQdmnhctP0kWD/z1uw9D08Rkxevw+G5UkyTGJK8uB2bpkQ0vGrHVDxI2pVZD6ZW3xx796Zkdb7QwkCSkn8Vmg3guCNGEmw+4KpAUSbBm2yMpB/Sz0EQSYUFDY6LgFFIZG+zaVcdzuAyaItMV1lg03tCc5Im7ZNIHxsgDuwM8+U6jmTHNq6rPQstZcfDX5EzVVgJHO9xwcKcHEsMW8FbnYcGX+8HuVAvTbh3bfHBsvwuyGRxzTRbOOCcGNnyBvV0O/iJDE+MwPGCDgRN2/gXmkNiLPulkMPaxzUfgqeCdM4m2gnBaE6Sve7Dj2gesqZQkW61gtWOAarNoAJnFWDLlWpIhjJU+S8XCqR8npUzVNJFUCisks7CWhj3lRciiGpseKqnlk8K0bBKYGqAp5aANr++EH43/2SRuc5hJ7o+CfesLLT9cyR6amyNbV1WgJow6L3jyz8VAlYFVelwuPqYz1vCahvck2sshUoVjuocrXM/0kqWS+8mkfMylx/BlKek83e+ZHuWArb0qpMSAbG6XZ6xaO/nm7UTPtwiYGHAq8MioE66jAiiZ9MIEDkhSCUjFrDZXE8pbsTUUgycVgUhGGXcpaEomh6RyslnMdEHV31kaOj4M0pZW+9X//WbzN3YpVDEuZs7rdPORTOZzqpvK5SJaMFe5nFmklAGFwUsVWFjhGiUiDiYmjna/UraZx6/EMzBiCw5g1JEtmvmOE9gmUdnxqu1KOB6a8OUbex+50EkwijIvFSJEi74N/SmNz8hpsG80RhLzYpHS1KgsES+efSrXMNMEiJb+Ee4ftARbLYm3Ksz28R9SDCWh2zlt93tXhfJFIfS6q0IqgtY2CPKazdKMV37Y8NRv290LBnKZrLhYaeBaYZ+Y10OQ0c2wEoCj6VvBvCRi0i2pXNdK/g7yKDoln+IlljAtF0nA1qqF71RcW8H0DEONLQqVRnLE3f+fzluPjnVcM/vLmWULpmfaA3YrxgCytbJpktEAPbWOmc3dnISTSpULcpKVWiaGEY1lVJ+0Uk29vo6jJLEvc7qoXOmYonwwecmaioBpTGOn77toRbg7SWk4Q+qP/Npx23avPTt+JrTPmpXbOHai0uFyyllJ0n5UwH9cALTo7sbSfDP7KmhFUYgBxrmVqhbmDLnMJM0oVThkAksHrhSgwrSpNrOU7YlBn725C0PrztNasskCWwuFGidAiwvU8XagY22U1iLHGnwQr2uCrvpa6K2pgojDQ0YcTpKSVSLRNHWxqUCapO4cJss0oXoyDFC3FLfKRLH4LCPYhm1+W0yu8iYlhw+xY79DYmsj5AoaJkJ6rfpKRlmppRoLkdn8KChl68qoal5LVh6ggikOY8di6zrhd3Dtv3/nu/fc/rGXnS9eEXYieA02gEYErtYCNIAU9WJa6mNLRFihVaaIDiH6cBQtNMyq4gXrVTMrK2jguU78HmseL43VjVc7myZLexvOCnZ4a5tysiXo1ApnDCgNMCgFzCzX+vynBhjVQGNzpqapPVoBMD4fWgKYmsxC3yv7lDtmvbrk5asnvj+qSY62rbkqxNYYHGaNMU9ifMDsAofuZGtoWANtbYnKR8mHxRK5vNZrP6kS625YlQfBduIgPBESqApLc6s3wZw62yBtqI5Ex83LrZtxXsPmYHCyW5K8Tm1Rn16TlyqYpPbjLh0wooPFvpMXx3mxgvIJD5BMk/KS4RVBEozMHBmEY66pe4ck2/ZP7PeSp7tduCKMjGOrTaHOAZQxuBH7FielE6dnP5p3hWdFS/Msj0UK1JrAqqBhYDZHDTC98eWkSnEapKdHfC1JcWoU/d0OeKzhoTsfuvHKf/vUAVa6LVoRttkohJwImgfoVBdVZ8xJbVp0Td2rLVWzJxPicJtAMyk8B0k1TBHyxgJlMK/spsUJt1JsmtkjUTj4fqLvnhnPL3pjaWjvqEs2Py3bWvET5UOsLWkNt7sI2fGBa/7u3bFZ5/7NqmcuO29ezC03TSgHjCjG7wSEyxWOQo8fiGnFNzGFFrp5SsIuU7u64b2Gbz2dItDxJ/+95Ce1XdwaDiLb5gdBXTw3vvHqGye8NcE1a55IhQr6ZRJ60FZqm9kF2iI/3qvGUnV9LT8yLIdJ4qFVA9Hvz/yfS19fGtpyylXUn9YN893IICGrToD89B8883/xWNcNW4fWraegWMSiLWI3GrCGikhsoDllzWlYjV8FE1JgGZjSvXjbMXg9dPNTSQI7/uif/31atktaw1XVoC6dmgl/+zbrLxbUXPolIiZLzKGEzq5sObtAW/hHFVMdTIXswQjsX53q+cezn75s1dLQttNap/9Z2FYvDUX7iPTCHvvYJ57MfnfT0FurxO/IObs0VhFrCbv035zLmnzLRRO2zEJjHxyly8ff8fNK7PpMA6bFhdkIIcv3OJof/3X6pv3JtW+YzNAMmsXUZAM0IhsBGG7JLV2wg8xtb/fOWsly6s8dYGxjJZcBQpZtc099bFn3BZFs+wcaGDq7TP+SQVG2YG4ElKE0DG6JZn4z4d6fJgjs+Vg/nfksgtYP0nPrgkuebGvP5ZTDHcVM0plVsYl4YnjVPni18TvP9suud7Xiw+cXMM2DprpBfuKVpttePb7ybaoMDpSAYorJCj2fU4REWxfsjk/d/07tFS+iNvaf7D6fG8DY9iY+7BHZ/ehLjfceHl7+PF+LXzBDUmyCegKZ64lB/4bB9G8mPfDICIG2U93jcwUY21YsDbVtRz1bLy1Ox15bXgROaS1NTWQh+spH9PkJP3iiW/a9h6ad/n8HGNt6QfqvN8Z+88XjB6M0vvZdKJ/QJEAzORh6aT285blu5SbfnNa3loaOnM61P5eAMT0Lg+UnL01+sG1o/R8g/t47Revf8pFhGHx2NWxQzt30+8avPxU/DVP8zEf6p7Nd09r11/NjW//1uv33zbC6bGCpqQI1k4Z8bwTa6q768PlxdzwWxVQLTTF5uteUP8+A1fzd3fuH7GMGD1Wdl3anBnzZkUw+DKHw78bf9cKbdUufjhHyLoKV+DjX/FwzjG2sMuymcIYNaBP7x7RUIGnMIrszBDoxms9/3Ov9rwADAHrbaR19YGzxAAAAAElFTkSuQmCC");
+}
+.es .gol-ideas.competition.nectar .header h1 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 7.2em;
+  font-weight: 800;
+  width: 270px;
+  margin-bottom: 7px;
+}
+.es .gol-ideas.competition.nectar .header h2 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 4.4em;
+  font-weight: 600;
+  width: 270px;
+}
+.es .gol-ideas.competition.nectar .header h3 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 3em;
+  font-weight: 600;
+  width: 270px;
+  margin-bottom: 7px;
+}
+.es .gol-ideas.competition.nectar .header h4 {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 2.4em;
+  font-weight: 600;
+  width: 270px;
+}
+.es .gol-ideas.competition.nectar .header img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  left: auto;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+.es .gol-ideas .center-container {
+  overflow: hidden;
+  position: relative;
+  height: 300px;
+  z-index: 0;
+}
+.es .gol-ideas .center-container img,
+.es .gol-ideas .center-container .inner {
+  position: absolute;
+  display: block;
+  top: -9999px;
+  bottom: -9999px;
+  left: -9999px;
+  right: -9999px;
+  margin: auto;
+  height: 100%;
+}
+.es .gol-ideas .center-container:after {
+  content: '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ';
+  visibility: hidden;
+}
+.es .gol-ideas hr {
+  margin: 0;
+  border-top: 1px solid #ff9900;
+  border-bottom: none;
+}
+.es .gol-ideas .container {
+  padding: 1.5em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.es .gol-ideas .min-width {
+  width: 632px;
+  margin: auto;
+}
+.es .gol-ideas .content-value {
+  color: #d32424;
+}
+.es .gol-ideas .content-value:before {
+  content: "\e600";
+  font-family: 'gol-font';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 0.3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1.6em;
+  position: relative;
+  top: 0.15em;
+}
+.es .hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  display: initial;
+}
+.es .es-grape-bg {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  z-index: 0;
+  display: block;
+  background-color: transparent !important;
+}
+.es .es-grape-bg img,
+.es .es-grape-bg .inner {
+  position: absolute !important;
+  display: block;
+  top: -9999px !important;
+  bottom: -9999px !important;
+  left: -9999px !important;
+  right: -9999px !important;
+  margin: auto;
+  height: 100% !important;
+}
+.es .es-grape-bg > div > a {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  z-index: 0;
+  display: block;
+}
+.es .es-grape-bg > div > a img,
+.es .es-grape-bg > div > a .inner {
+  position: absolute !important;
+  display: block;
+  top: -9999px !important;
+  bottom: -9999px !important;
+  left: -9999px !important;
+  right: -9999px !important;
+  margin: auto;
+  height: 100% !important;
+}
+.es .es-grape-bg > div > a:after {
+  content: '&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ';
+  visibility: hidden;
+}
+#homePage .es h2 {
+  font-size: 2.2em;
+  line-height: 1.2em;
+  margin-bottom: 0;
+  color: #3d3d3d;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+  font-weight: normal;
+}
+#homePage .es h3 {
+  font-size: 2em;
+  line-height: 1.05em;
+  margin-bottom: 5px;
+  color: #3d3d3d;
+  font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';
+  font-weight: normal;
+}
+#homePage .es h3.hero {
+  font-size: 3em;
+  margin: 0 0 .2em;
+}
+#homePage .es h3.hero.white {
+  color: #ffffff;
+}
+#homePage .es h3.content-hero {
+  font-size: 3em;
+  margin: 0 0 .2em;
+}
+#homePage .es h3.content-hero.white {
+  color: #ffffff;
+}
+#homePage .es h3.content-service-info {
+  font-size: 1.8em;
+}
+#homePage .es h3.content-service-info {
+  font-size: 1.8em;
+}
+#homePage .es h3.content-value {
+  color: #d32424;
+}
+div.es-border-box div.es-border-box h3 {
+  line-height: 1.1em;
+  font-size: 15pt;
+  margin-bottom: 0.2em;
+}
+/*
+This was causing an issue on the homepage espots. Commented out to see if resolves/effects anything else - steve clark
+
+.floatingHeader .section {
+  margin: 0 0 20px 0;
+}*/
+
+
+/*
+Hiding as it was effecting 2016 christmas banners  - Tim Penton
+
+#homePage .es a[href="/shop/gb/groceries/Christmas"] {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+  z-index: 0;
+  display: block;
+  background-color: transparent !important;
+}
+#homePage .es a[href="/shop/gb/groceries/Christmas"] img {
+  position: absolute !important;
+  display: block;
+  top: -9999px !important;
+  bottom: -9999px !important;
+  left: -9999px !important;
+  right: -9999px !important;
+  margin: auto;
+  height: 100% !important;
+}
+
+*/
+
+/* - Highlights hierarchy menu options red for Xmas - 
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/fruit-veg/christmas-veg"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/meat-fish/christmas"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/baby/christmas-gifts-236275-44"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net//shop/gb/groceries/fruit-veg/christmas-veg"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/fruit-veg/christmas-fruit---nut"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/bakery/mince-pies--christmas-pudding---christmas-cakes"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/bakery/cakes---treats-from-only-80p-%28for-delivery-by-tuesday-11th-august%29"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/frozen-/festive-essentials"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/food-cupboard/great-offers-on-food-cupboard-essentials-%28for-delivery-by-tues-27th-oct%29"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/drinks/festive-favourites"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/health-beauty/christmas-gifts-233755-44"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/household/clean-up-for-christmas-"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/pet/christmas-gifts-for-pets"],
+.categories a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/home-ents/christmas-"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/fruit-veg/christmas-veg"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/fruit-veg/christmas-fruit---nut"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/bakery/mince-pies--christmas-pudding---christmas-cakes"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/bakery/cakes---treats-from-only-80p-%28for-delivery-by-tuesday-11th-august%29"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/frozen-/festive-essentials"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/food-cupboard/great-offers-on-food-cupboard-essentials-%28for-delivery-by-tues-27th-oct%29"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/drinks/festive-favourites"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/health-beauty/christmas-gifts-233755-44"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/household/clean-up-for-christmas-"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/pet/christmas-gifts-for-pets"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/home-ents/christmas-"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/fruit-veg/christmas-veg"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/meat-fish/christmas"],
+.categories a[href="http://www.sainsburys.co.uk/shop/gb/groceries/baby/christmas-gifts-236275-44"],
+.subNav ul li a[href="http://a-eco-www-sta-flt-vs-p.bc.jsplc.net/shop/gb/groceries/Christmas"],
+.subNav ul li a[href="http://www.sainsburys.co.uk/shop/gb/groceries/Christmas"]
+{
+color:#9e313f;   
+ font-weight:500;
+}
+*/
+
+
+/****** Navigation colour change ******/
+/* Changes first entry colour in the subNav - atm.Summer */
+/*body#zonePage .subNav ul li:last-child a,
+body#homePage .subNav ul li:last-child a,
+body#shelfPage .subNav ul li:last-child a,
+body#productDetails .subNav ul li:last-child a,
+body#departmentPage .subNav ul li:last-child a
+{
+    color: #5aa200;
+}*/
+
+
+/***** Change Sale to Red on Global Nav****/
+/*div#groceriesNav.groceriesNav div.subNav ul li:last-child a
+{color: red!important;}*/
+/*body#zonePage .subNav ul li:first-child a,
+body#homePage .subNav ul li:first-child a,
+body#shelfPage .subNav ul li:first-child a,
+body#productDetails .subNav ul li:first-child a,
+body#departmentPage .subNav ul li:first-child a,
+body#aislePage .subNav ul li:first-child a
+{color: #d10000!important;}*/
+
+/***** Change Sale on hiarachy vertical nav *******/
+
+/*body#zonePage div.subNav ul li:last-child a;
+body#departmentPage div.subNav ul li:last-child a;
+{color: #d10000!important;}*/
+
+/*******Lunar Styling*********/
+
+h3.gol-lunar{
+    font-size:23px!important;font-family: MaryAnnWebBold,helvetica,sans-serif;color: rgb(51, 51, 51);line-height:18px!important;
+}
+h4.gol-lunar{
+    font-size:16px!important;text-align: center; color:#f18d37;font-family: MaryAnnWebBold,helvetica,sans-serif;
+}
+p.gol-lunar .hero{
+    font-size:23px!important;font-family: MaryAnnWebBold,helvetica,sans-serif; color: #000;line-height:20px;
+}
+p.gol-lunar{
+    font-family:arial;font-size:13.5px!important;line-height:18px;
+}
+a.gol-lunar .icons-m-4-star-top,
+a.gol-lunar .icons-m-4half-star-top,
+a.gol-lunar .icons-m-5-star-top{font-size:13.5px;text-decoration: underline;line-height:18px!important;}
+a.gol-lunar-btn{
+   margin: -7px auto 0pt; display: table; font-family: MaryAnnWebRegular,helvetica,sans-serif; padding: 0pt 56px; background: none repeat scroll 0% 0% #910048; height: 31px ! important; line-height: 30px ! important;
+}
+
+p.gol-lunar-highlight, .gol-lunar-highlight{
+    font-size:23px!important;font-family: MaryAnnWebBold,helvetica,sans-serif;color: rgb(51, 51, 51);line-height:18px!important;
+}
+
+ul.gol-lunar{
+    margin-left:20px;
+    list-style-type: disc;
+}
+ul.gol-lunar li{
+    font-family:arial;font-size:13.5px!important;line-height:18px;
+}
+
+/*Lunar Beacon*/
+div.gol-lunar-beacon{text-align:center;}
+div.gol-lunar-beacon a.icons-m-4-star-top,
+div.gol-lunar-beacon a.icons-m-4half-star-top,
+div.gol-lunar-beacon a.icons-m-5-star-top{font-size:13.5px;text-decoration: underline;}
+div.gol-lunar-beacon h3{font-size:23px!important;font-family: MaryAnnWebBold,helvetica,sans-serif;text-align: center; color: rgb(51, 51, 51);line-height:20px!important;}
+div.gol-lunar-beacon h4{font-size:16px!important;text-align: center; color:#f18d37;font-family: MaryAnnWebBold,helvetica,sans-serif;margin-bottom: 7px!important;}
+div.gol-lunar-beacon p{font-family:arial;font-size:13.5px!important;text-align: center;line-height:18px!important;}
+div.gol-lunar-beacon a.btn{margin: 13px auto 0pt; display: table; font-family: MaryAnnWebRegular,helvetica,sans-serif; padding: 0pt 56px; background: none repeat scroll 0% 0% #910048; height: 31px ! important; line-height: 30px ! important;}
+
+/*Lunar Spring board*/
+
+div.gol-lunar-springboard h3{font-size:23px!important;font-family: MaryAnnWebBold,helvetica,sans-serif;text-align: center; color: rgb(51, 51, 51);line-height:20px!important;margin-bottom: 0.4em !important;}
+div.gol-lunar-springboard a.icons-m-4-star-top,
+div.gol-lunar-springboard a.icons-m-4half-star-top,
+div.gol-lunar-springboard a.icons-m-5-star-top{font-size:13.5px;text-decoration: underline;}
+div.gol-lunar-springboard h4{font-size:16px!important;text-align: center; color:#f18d37;font-family: MaryAnnWebBold,helvetica,sans-serif;margin-bottom: 7px!important;}
+div.gol-lunar-springboard p{margin-top:8px;font-family:arial;font-size:13.5px!important;text-align: center;line-height:18px!important;}
+div.gol-lunar-springboard a.btn{margin: 13px auto 0pt; display: table; font-family: MaryAnnWebRegular,helvetica,sans-serif; padding: 0pt 56px; background: none repeat scroll 0% 0% #910048; height: 31px ! important; line-height: 30px ! important;}
+
+div.gol-lunar-springboard p span{font-weight: bold;}
+div.gol-lunar-springboard .red, .gol-lunar.red{color:#d32322}
+div.gol-lunar-springboard .black, .gol-lunar.black{color: rgb(51, 51, 51);}
+div.gol-lunar-springboard .grey, .gol-lunar.grey{color:#939393}
+div.gol-lunar-springboard .white, .gol-lunar.white{color:#FFF!important;}
+
+
+/*******/
+/******* LUNAR NEW SPRING Board DEC 2016 ********/
+/*******/
+
+/***Lunar headers**/
+div.es-lunar h2{font-family: MaryAnnWebLight,helvetica,sans-serif;font-size: 26px;}
+div.es-lunar h3{font-size:16px!important;text-align: center; color:#f18d37;font-family: MaryAnnWebBold,helvetica,sans-serif;margin-bottom: 7px!important;}
+div.es-lunar h3.large{color: rgb(51, 51, 51);font-size:23px!important;font-family: MaryAnnWebBold,helvetica,sans-serif;text-align: center; line-height:20px!important;margin-bottom: 0.4em !important;}
+div.es-lunar h4{font-size:23px!important;font-family: MaryAnnWebBold,helvetica,sans-serif;text-align: center; color: rgb(51, 51, 51);line-height:20px!important;margin-bottom: 0.4em !important;}
+
+/**Lunar text and colours**/
+div.es-lunar p{margin-top:8px;font-family:arial;font-size:13.5px!important;text-align: center;line-height:18px!important;}
+div.es-lunar p span{font-weight: bold;}
+div.es-lunar p.highlight{font-size:16px!important;text-align: center; color:#f18d37;font-family: MaryAnnWebBold,helvetica,sans-serif;margin-bottom: 7px!important;}
+div.es-lunar .red, .es-lunar.red{color:#d32322}
+div.es-lunar .grey, .es-lunar.grey{color:#939393}
+div.es-lunar .purple, .es-lunar.purple{color:#960049}
+div.es-lunar .white, .es-lunar.white{color:#FFF!important}
+div.es-lunar .black, .es-lunar.black{color: rgb(51, 51, 51)}
+
+div.es-lunar p.luna-quote{text-align:center!important;font-size: 23px!important;line-height:28px!important;font-family:MaryAnnWebLightItalic,helvetica,sans-serif!important;color: #4b4b4b!important;}
+
+
+/**Lunar section header**/
+.lunar-section-header{
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap; 
+}
+.lunar-section-header > h2 {
+        position: relative;
+        display: inline-block;
+        font-size: 26px;
+        font-family: MaryAnnWebLight,helvetica,sans-serif;
+        color:rgb(51, 51, 51);
+}
+.lunar-section-header > h2.white {
+        color:#FFF;
+}
+.lunar-section-header > h2:before,
+.lunar-section-header > h2:after {
+        content: "";
+        position: absolute;
+        top: 54%;
+        width: 9999px;
+        height: 1px;
+        background: #dedccf;
+}
+
+.lunar-section-header > h2:before {
+        right: 100%;
+        margin-right: 15px;
+}
+
+.lunar-section-header > h2:after {
+        left: 100%;
+        margin-left: 15px;
+}
+
+/*
+.lunar-section-header > h3.white:before,
+.lunar-section-header > h3.white:after {
+        background: #FFF;
+}*/
+
+
+
+
+/**Lunar Links**/
+div.es-lunar a.icons-m-4-star-top,
+div.es-lunar a.icons-m-4half-star-top,
+div.es-lunar a.icons-m-5-star-top{font-size:13.5px;text-decoration: underline;text-align:center;}
+a.lunar-text-link{font-size:16px!important;text-align: center; color: rgb(51, 51, 51);font-family: MaryAnnWebBold,helvetica,sans-serif;margin-bottom: 7px!important;text-decoration: underline;}
+div.es-lunar a.btn{margin: 13px auto 0pt; display: table; font-family: MaryAnnWebRegular,helvetica,sans-serif; padding: 0pt 56px; background: none repeat scroll 0% 0% #910048; height: 31px ! important; line-height: 30px ! important;}
+
+/**Lunar Lists**/
+div.es-lunar ul{margin-left:20px; list-style-type: disc;}
+div.es-lunar ul li{font-family:arial;font-size:13.5px!important;line-height:18px;}
+
+/**Lunar scalable text**/
+/*media query used as text will continue to resize once browser window has gone past minmum width*/
+@media (min-width:986px) and (max-width:1220px) {
+div.es-lunar h3.scale-text{font-size:calc(10% + 1.2vw) !important;}
+div.es-lunar h4.scale-text{font-size:calc(10% + 1.8vw) !important}
+div.es-lunar p.scale-text{font-size:calc(10% + 1vw) !important}
+}
+@media only screen and (max-width: 985px) {
+div.es-lunar h3.scale-text{font-size:13px !important;}
+div.es-lunar h4.scale-text{font-size:19px !important}
+div.es-lunar p.scale-text{font-size:11px !important}
+}
+
+
+/**Lunar elements**/
+div.lunar-product-inspiration{padding: 10px 15px 0pt; float: right; width: 45%; height: 330px; text-align: center;}
+div.lunar-product-inspiration img#lunar-product-inspiration{position: inherit!important; width: 280px !important; height: auto!important; margin-bottom: 20px;}
+
+div.lunar-product-inspiration-left{padding: 10px 15px 0pt; float: left; width: 45%; height: 330px; text-align: center;}
+div.lunar-product-inspiration-left img#lunar-product-inspiration{position: inherit!important; width: 280px !important; height: auto!important; margin-bottom: 20px;}
+
+
+div.lunar-search-banner{padding: 10px 31px 0px 5px; float: right; width: 45%; height: 330px; text-align: left;}
+div.lunar-search-banner img#lunar-search-banner{position: inherit!important; width: 200px !important; height: auto!important; margin: 0 0 6px 0;}
+div.lunar-search-banner .btn{margin: 0!important;padding: 0pt 35px!important;}
+div.lunar-search-banner h3{margin-bottom: 15px;margin-top:0px!important;text-align:left!important;}
+div.lunar-search-banner p{text-align:left!important;margin-top: 8px!important;}
+div.lunar-search-banner .icons-m-5-star-top::before,
+div.lunar-search-banner .icons-m-4half-star-top::before,
+div.lunar-search-banner .icons-m-4-star-top::before{
+    margin: 0;
+}
+
+div.gol-lunar-carousel-right{padding: 50px 15px 0pt; float: right; width: 50%; height: 409px; background: none repeat scroll 0% 0% #ffffff ! important; text-align: center;}
+div.gol-lunar-carousel-right img{display: inline ! important; position: inherit ! important; margin-bottom: 28px;}
+div.gol-lunar-carousel-right div.lunar-img-link{margin: 0pt auto; width: 240px;}
+div.gol-lunar-carousel-right div.lunar-img-link img{ display: inline ! important; position: inherit ! important;}
+   
+div.es-quote-landscape{width: 575px; height: 300px; margin: auto; display: table;}
+div.es-quote-landscape div.container-image{position: relative; float: left; width: 307px ! important; height: 185px ! important; background: none repeat scroll 0% 0% transparent;}
+div.es-quote-landscape div.container-image a {height: 185px ! important; width: 277px ! important;}
+div.es-quote-landscape div.container-image a img{height: 185px ! important; width: 277px ! important; display: inline ! important; position: inherit ! important;}
+div.es-quote-landscape div.es-lunar{position:relative; float:left;width: 268px;}
+div.es-quote-landscape div.es-lunar h3{text-align:left!important;}
+div.es-quote-landscape div.es-lunar p.quote{text-align:left;font-size: 17pt!important;line-height:27px!important;font-family:MaryAnnWebItalic,helvetica,sans-serif;color: #ffffff;}
+div.es-quote-landscape div.es-lunar p{text-align:left;font-size: 13pt!important;color: #f18d37;font-family: MaryAnnWebMedium,helvetica,sans-serif;}
+
+div.es-quote-portrait{width: 575px; height: 300px; margin: auto; display: table;}
+div.es-quote-portrait div.container-image{position: relative; float: left; width: 165px ! important; height: 185px ! important; background: none repeat scroll 0% 0% transparent;}
+div.es-quote-portrait div.container-image a {height: 185px ! important; width: 135px ! important;}
+div.es-quote-portrait div.container-image a img{height: 185px ! important; width: 135px ! important; display: inline ! important; position: inherit ! important;}
+div.es-quote-portrait div.es-lunar{position:relative; float:left;width: 268px;}
+div.es-quote-portrait div.es-lunar h3{text-align:left!important;}
+div.es-quote-portrait div.es-lunar p.quote{text-align:left;font-size: 17pt!important;line-height:27px!important;font-family:MaryAnnWebItalic,helvetica,sans-serif;color: #ffffff;}
+div.es-quote-portrait div.es-lunar p{text-align:left;font-size: 13pt!important;color: #f18d37;font-family: MaryAnnWebMedium,helvetica,sans-serif;}
+
+div.es-lunar-banner-generic{width: 610px; margin: 0pt auto; display: block;}
+div.es-lunar-banner-generic div.es-lunar{width: 175px; margin-left: 130px; float: right;}
+div.es-lunar-banner-generic div.es-lunar h3{padding-bottom:8px;}
+div.es-lunar-banner-generic div.es-lunar p{margin-bottom:2px;}
+div.es-lunar-banner-generic div.es-lunar a.btn{padding: 0 25px;margin-top:22px;}
+
+div.es-lunar-banner-generic-left{width: 100%; margin: 0pt auto; display: block;}
+div.es-lunar-banner-generic-left div.es-lunar{width: 175px; margin-left: 30px; float: left;}
+div.es-lunar-banner-generic-left div.es-lunar h3{padding-bottom:8px;}
+div.es-lunar-banner-generic-left div.es-lunar p{margin-bottom:2px;}
+div.es-lunar-banner-generic-left div.es-lunar a.btn{padding: 0 25px;margin-top:22px;}
+
+div.es-lunar-banner-generic-left .icons-m-5-star-bottom::after,
+div.es-lunar-banner-generic .icons-m-5-star-bottom::after,
+div.es-lunar-banner-generic-left .icons-m-4-star-bottom::after,
+div.es-lunar-banner-generic .icons-m-4-star-bottom::after,{
+    margin: 8px auto 16px!important;
+}
+
+div.es-lunar-beacon-hero{margin: 0pt auto; display: table; width: 451px;}
+div.es-lunar-beacon-hero h3{margin-left:240px;padding-bottom:6px;text-align: left;}
+div.es-lunar-beacon-hero h4{margin-left:240px;text-align: left;}
+div.es-lunar-beacon-hero p{margin-left:240px;text-align: left;}
+div.es-lunar-beacon-hero .btn{margin-left:240px!important;}
+
+div.es-lunar-beacon-hero-left{margin: 0pt auto; display: table; width: 451px;}
+div.es-lunar-beacon-hero-left h3{padding-bottom:6px;text-align: left;}
+div.es-lunar-beacon-hero-left h4{text-align: left;}
+div.es-lunar-beacon-hero-left p{text-align: left;width: 220px;}
+div.es-lunar-beacon-hero-left .btn{margin-left:0!important;}
+
+/**Lunar Microsite Nav**/
+
+div.lunar-shelf-nav h2{font-size: 24px;text-align:center;}
+div.lunar-shelf-nav h3{font-size:44px!important;margin-top:-20px;}
+
+
+/* Nav bar */
+ul.lunar-nav-bar {list-style: none;list-style: none outside none;width:calc(100% - 120px);float:left;margin-left: 10px;}
+ul.lunar-nav-bar-highlight {list-style: none;list-style: none outside none;width:100px;float:right;display: inline-block;margin: 15px 0;}
+
+ul.lunar-nav-bar li,
+ul.lunar-nav-bar-highlight li{display: inline-block;text-decoration: none;list-style: none;margin:20px 15px;font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';font-size:18px;}
+ul.lunar-nav-bar li a:hover,
+ul.lunar-nav-bar-highlight li a:hover,
+.lunar-nav-bar-center ul li a:hover{color:#cc0066;text-decoration: underline;} 
+ul.lunar-nav-bar li a.on,
+.lunar-nav-bar-center ul li a.on{color:#cc0066;} 
+ul.lunar-nav-bar li a,
+ul.lunar-nav-bar-highlight li {text-decoration: none;margin-top: 5px;margin-bottom: 5px;}
+ul.lunar-nav-bar-highlight li a{text-decoration: none;font-weight: bold;}
+
+/* Nav bar center*/
+.lunar-nav-bar-center{text-align: center;}
+.lunar-nav-bar-center ul {list-style: none outside none;display: inline-block;}
+.lunar-nav-bar-center ul li{display: inline;text-decoration: none;list-style: none;font-family: 'MaryAnnWebLight', 'MaryAnnWebRegular';font-size:18px;}
+.lunar-nav-bar-center ul li a {float: left;text-decoration: none;margin-top: 20px;margin-bottom: 20px; padding: 0 17px;}
+
+/** Lunar borders **/
+
+.lunar-border-dotted{
+    border: 3px solid transparent;
+    -webkit-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-border-dots-grey-small.png) 12 round; /* Safari 3.1-5 */
+    -o-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-borderdots-grey-small.png) 12 round; /* Opera 11-12.1 */
+    border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-border-dots-grey-small.png) 12 round;}
+.lunar-border-dotted-top{
+    border-top: 3px solid transparent;
+    -webkit-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-border-dots-grey-small.png) 12 round; /* Safari 3.1-5 */
+    -o-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-borderdots-grey-small.png) 12 round; /* Opera 11-12.1 */
+    border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-border-dots-grey-small.png) 12 round;}
+.lunar-border-dotted-right{
+    border-right: 3px solid transparent;
+    -webkit-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-border-dots-grey-small.png) 12 round; /* Safari 3.1-5 */
+    -o-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-borderdots-grey-small.png) 12 round; /* Opera 11-12.1 */
+    border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-border-dots-grey-small.png) 12 round;}
+.lunar-border-dotted-bottom{
+    border-bottom: 3px solid transparent;
+    -webkit-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-border-dots-grey-small.png) 12 round; /* Safari 3.1-5 */
+    -o-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-borderdots-grey-small.png) 12 round; /* Opera 11-12.1 */
+    border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/lunar-border-dots-grey-small.png) 12 round;}
+.lunar-border-dotted-left{
+    border-left: 3px solid transparent;
+    -webkit-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/border-dots-grey-small.png) 12 round; /* Safari 3.1-5 */
+    -o-border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/border-dots-grey-small.png) 12 round; /* Opera 11-12.1 */
+    border-image: url(http://c1.sainsburys.co.uk/wcassets/lunar/borders/border-dots-grey-small.png) 12 round;}
+
+/**Lunar Table**/
+
+table.es-lunar-table,table.es-lunar-table th,table.es-lunar-table td {
+    border: none;
+}
+
+table.es-lunar-table tr.table-lunar-header{
+    border-bottom:1px solid #e3e3e3!important;
+    background:#FFF!important;
+}
+
+table.es-lunar-table tr.table-lunar-header td{
+    font-size:18px!important;font-family: MaryAnnWebBold,helvetica,sans-serif;color: rgb(51, 51, 51);line-height:20px!important;font-weight: normal!important;
+}
+
+
+table.es-lunar-table tr.table-lunar-header span{
+    font-size:14px;color:#4c4c4c;font-family:helvetica,sans-serif;font-weight:lighter;line-height:20px!important;
+}
+
+table.es-lunar-table tr.table-lunar-header td{
+    padding:10px 10px 10px 20px;
+}
+
+table.es-lunar-table tr:nth-child(odd){
+    background:#f6f6f6;
+}
+
+table.es-lunar-table tr td{
+    border:none!important;font-size:17px;color:#4c4c4c;font-family:helvetica,sans-serif;font-weight:lighter;line-height:20px!important;
+    padding:25px 10px 25px 20px;
+}
+
+table.es-lunar-table tr td a{
+    text-decoration: underline;
+    font-size:12px;
+}
+
+/****** Lunar END ********/
+/****** Shelf hide content START ******/
+body#shelfPage div#dept-body-display-none{
+    display:none;
+}
+/****** Shelf hide content END ******/
+
+/* inserts a red pound icon before text */
+.pound-icon:before {
+    content: url(http://c1.sainsburys.co.uk/wcassets/default/banner/pound-icon.jpg);
+    position:relative;
+    top: 2px;
+    margin-right:8px;
+}
+
+/* inserts a red pound icon LARGE before text */
+.pound-icon-large:before {
+    content: url(http://c1.sainsburys.co.uk/wcassets/icons/MFP/icon-pound-large.png);
+    position: absolute;
+    margin-left: -40px;
+    top:2px;  
+}
+
+
+.content-one-third {
+    pointer-events: fill; 
+    position: relative; 
+    float: left; 
+    height: 212px; 
+    margin: 8px; 
+    background: none repeat scroll 0% 0% white; 
+    text-align: center; 
+    width: 600px;
+    width: -webkit-calc(33.33% - 16px);
+    width: -moz-calc(33.33% - 16px);
+    width: calc(33.33% - 16px);    
+}
+
+/*New template 2016 */
+
+/*Image hover Zoom in */
+.es-image-zoom-in {
+    overflow: hidden;
+}
+
+.es-image-zoom-in img {
+   opacity:0.85;
+   -webkit-transition: all 30.5s ease-in;
+   -moz-transition: all 30.5s ease-in;
+   -o-transition: all 30.5s ease-in;
+   -ms-transition: all 30.5s ease-in;
+   transition: all 30.5s ease-out;
+}
+
+.es-image-zoom-in:hover img {
+	opacity:1;
+   -moz-transform:scale(2,2);
+   -webkit-transform:scale(2,2);
+   -o-transform:scale(2,2);
+   -ms-transform:scale(2,2);
+   transform:scale(2,2);
+}
+
+a.es-image-hover-container {
+    display: inline-block;
+    overflow: auto;
+}
+
+a.es-image-hover-container > img.es-img-hover-1 {
+    width: 100%;
+    height: 100%;
+    clear: both;
+    flex: 1 1 0%;
+    overflow: auto;
+    display: table;
+    position: relative;
+    top: 0px;
+    margin-top: 0px;
+    visibility: visible;
+    transition: visibility 0.5s ease 0s, opacity 0.5s linear 0s;
+}
+
+a.es-image-hover-container:hover > img.es-img-hover-1 {
+  visibility: visible;
+  opacity: 1;
+}
+
+a.es-image-hover-container > img.es-img-hover-2 {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+    transition: visibility 0.5s ease 0s, opacity 0.5s linear 0s;
+    position: relative;
+    top: 0px;
+    position: absolute;
+    margin-top: 0px;
+}
+
+
+
+a.es-image-hover-container:hover > img.es-img-hover-2 {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*Image hover END*/
+
+/*Image fade to Black and white or fade to colour */
+
+.es-image-fade-to-bw {
+   -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+    transition-duration: 0.5s;
+}
+    
+.es-image-fade-to-bw:hover {
+	-webkit-filter: none; /* Chrome, Safari, Opera */
+    filter: none;
+}
+    
+    /*color*/
+.es-image-fade-to-color{
+    -webkit-filter: grayscale(0%); /* Chrome, Safari, Opera */
+    filter: grayscale(0%);
+    transition-duration: 0.5s;
+}
+    
+.es-image-fade-to-color:hover {
+	-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
+}
+
+
+/*Star rating*/
+
+.icon-star-rating-5 {
+    text-align:center;
+}
+.icon-star-rating-5:after {
+    content: url(http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/images/general/icons/icon-star-rating-5.png);
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+}
+
+.icon-star-rating-4 {
+    text-align:center;
+}
+.icon-star-rating-4:after {
+    content: url(http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/images/general/icons/icon-star-rating-4.png);
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+}
+
+.icon-star-rating-3 {
+text-align:center;
+}
+.icon-star-rating-3:after {
+    content: url(http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/images/general/icons/icon-star-rating-3.png);
+    text-align:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:10px;
+}
+
+.icon-star-rating-2 {
+text-align:center;
+}
+.icon-star-rating-2:after {
+content: url(http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/images/general/icons/icon-star-rating-2.png);
+text-align:center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top:10px;
+}
+
+.icon-star-rating-1 {
+text-align:center;
+}
+.icon-star-rating-1:after {
+content: url(http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/groceries/images/general/icons/icon-star-rating-1.png);
+text-align:center;
+display: block;
+margin-left: auto;
+margin-right: auto;
+margin-top:10px;
+}
+
+/*****************************/
+/******SVG ICONS START********("../../icons/value.svg")/
+/*****************************/
+/*********VALUE ICONS*********/
+/*Icon Value Default CSS Medium*/
+.icons-value-before{
+    margin-left:26px!important;
+}
+            
+.hero.icons-value-before{
+    margin-left:30px!important;
+}
+            
+            
+
+.icons-value-after:after,
+.icons-value-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/value.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size: 20px auto;/*change width*/
+}
+
+.icons-value-after:after {
+    padding: 20px 0px 0px 20px;/*change both top and right padding to mirror width*/
+    margin: 1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-value-before:before {
+    padding: 20px 20px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 1px 0px 0px -26px;
+    display: inline-flex;
+}
+a.icons-value-before:before { /*if class added to an anchor*/
+    margin-top: -3px;
+    margin-left: -25px;
+}
+
+/*left alignment*/
+h2.icons-value-before,h3.icons-value-before,h4.icons-value-before,h5.icons-value-before,h6.icons-value-before {
+    margin-left: 30px !important;
+}
+
+/********Value icon center*****/
+
+.icons-value-bottom,
+.icons-value-top{
+    text-align: center;
+}
+.icons-value-bottom:after,
+.icons-value-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/value.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    background-size: 20px auto;/*change width*/
+    padding: 20px 20px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 5px auto;
+    display: table;
+    text-align: center;
+}
+
+/******Value Individual styles*******/
+/*Value Icon size*/
+h2.icons-value-after:after,h3.icons-value-after:after,h4.icons-value-after:after,
+h2.icons-value-before:before,h3.icons-value-before:before,h4.icons-value-before:before,
+h2.icons-value-bottom:after,h3.icons-value-bottom:after,h4.icons-value-bottom:after,
+h2.icons-value-top:before,h3.icons-value-top:before,h4.icons-value-top:before,
+.hero.icons-value-before:before, .hero.icons-value-after:after{
+     background-size: 24px auto;/*change width*/
+}  
+/*Vale padding change */
+h2.icons-value-before:before,h3.icons-value-before:before,h4.icons-value-before:before,
+h2.icons-value-bottom:after,h3.icons-value-bottom:after,h4.icons-value-bottom:after,
+h2.icons-value-top:before,h3.icons-value-top:before,h4.icons-value-top:before,
+h2.icons-value-top:after,h3.icons-value-top:after,h4.icons-value-top:after,
+.hero.icons-value-before:before,.hero.icons-value-after:after{
+    padding: 24px 24px 0px 0px;/*change both top and right padding to mirror width*/
+}
+/*Value height and gap alignment*/
+h2.icons-value-before:before {margin: 4px 0px 0px -31px;}
+h3.icons-value-before:before {margin: 0px 0px 0px -29px;}
+h4.icons-value-before:before {margin: -1px 0px 0px -30px;}
+h5.icons-value-before:before {margin: 0px 0px 0px -26px;}
+h6.icons-value-before:before {margin: 0px 0px 0px -26px;}   
+.hero.icons-value-before:before {margin: -4px 0px 0px -30px;}
+h2.hero.icons-value-before:before {margin: 4px 0px 0px -30px;} 
+h3.hero.icons-value-before:before {margin: 7px 0px 0px -30px;} 
+h4.hero.icons-value-before:before {margin: -1px 0px 0px -30px;} 
+h5.hero.icons-value-before:before {margin: -2px 0px 0px -30px;} 
+h6.hero.icons-value-before:before {margin: -3px 0px 0px -30px;}
+p.hero.icons-value-before:before {margin: 1px 0px 0px -30px;}
+a.hero.icons-value-before:before {margin: -7px 0px 0px -30px;}
+            
+a.icons-value-after::after {margin: -2px 0px 0px 6px;}
+a.hero.icons-value-after::after {margin: -6px 0px 0px 6px;}
+            
+p.hero.icons-value-after::after { margin: 6px 0px 0px 6px;}
+/*****************************/
+/******SVG ICONS START********("../../icons/value.svg")/
+/*****************************/
+/*********5 Stars ICONS*********/
+/*Icon 5 Stars Default CSS Medium*/
+.icons-5-star-before{
+    margin-left:0px!important;
+}
+            
+.icons-5-star-after:after,
+.icons-5-star-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size:auto 20px ;/*change width*/
+}
+
+.icons-5-star-after:after {
+    padding: 24px 0px 0px 134px;/*change both top and right padding to mirror width*/
+    margin: -1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-5-star-before:before {
+    padding: 20px 20px 0px 138px;/*change both top and right padding to mirror width*/
+    margin: -2px 0px 0px -140px;
+    display: inline-flex;
+}
+a.icons-5-star-before:before { /*if class added to an anchor*/
+    margin-top: -5px;
+    margin-left: 121px;
+}
+
+/*left alignment*/
+h2.icons-5-star-before,h3.icons-5-star-before,h4.icons-5-star-before {
+    margin-left: 169px !important;
+}
+h5.icons-5-star-before,h6.icons-5-star-before {
+    margin-left: 142px !important;
+}
+
+
+/********5 Stars icon center*****/
+
+.icons-5-star-bottom,
+.icons-5-star-top{
+    text-align: center;
+}
+.icons-5-star-bottom:after,
+.icons-5-star-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    background-size: auto 20px ;/*change width*/
+    padding: 20px 134px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 5px auto;
+    display: table;
+    text-align: center;
+}
+
+/******5 Stars Individual styles*******/
+/*5 Stars Icon size*/
+h2.icons-5-star-after:after,h3.icons-5-star-after:after,h4.icons-5-star-after:after,
+h2.icons-5-star-before:before,h3.icons-5-star-before:before,h4.icons-5-star-before:before,
+h2.icons-5-star-bottom:after,h3.icons-5-star-bottom:after,h4.icons-5-star-bottom:after,
+h2.icons-5-star-top:before,h3.icons-5-star-top:before,h4.icons-5-star-top:before,
+.hero.icons-5-star-before:before, .hero.icons-5-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*5 Stars padding change */
+h2.icons-5-star-before:before,h3.icons-5-star-before:before,h4.icons-5-star-before:before,
+h2.icons-5-star-bottom:after,h3.icons-5-star-bottom:after,h4.icons-5-star-bottom:after,
+h2.icons-5-star-top:before,h3.icons-5-star-top:before,h4.icons-5-star-top:before,
+.hero.icons-5-star-before:before,.hero.icons-5-star-after:after{
+    padding: 24px 24px 0px 134px;/*change both top and right padding to mirror width*/
+}
+/*5 Stars height and gap alignment*/
+h2.icons-5-star-before:before {margin: 3px 0px 0px -167px;}
+h3.icons-5-star-before:before {margin: 0px 0px 0px -167px;}
+h4.icons-5-star-before:before {margin: -3px 0px 0px -167px;}
+h5.icons-5-star-before:before {margin: 0px 0px 0px -138px;}
+h6.icons-5-star-before:before {margin: -1px 0px 0px -138px;}   
+
+p.icons-5-star-after:after {margin: -4px 0px 0px 8px;}
+a.icons-5-star-after:after {margin: -4px 0px 0px 6px;}
+h2.icons-5-star-after:after {margin-top: 3px;}
+h3.icons-5-star-after:after {margin-top: 1px;}
+h4.icons-5-star-after:after {margin-top: -2px;}
+
+h2.icons-5-star-after:after,h3.icons-5-star-after:after,h4.icons-5-star-after:after {
+    padding: 24px 0px 0px 159px;}
+/*hero*/
+h5.hero.icons-5-star-before,h6.hero.icons-5-star-before {
+    margin-left: 166px !important;
+}
+h5.hero.icons-5-star-before::before,h6.hero.icons-5-star-before::before {
+   margin: 0px 0px 0px -164px;
+}   
+         
+a.hero.icons-5-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-5-star-before:before {margin: -7px 0px 0px -167px;}
+p.icons-5-star-before {margin-left: 142px !important;}
+
+p.hero.icons-5-star-before {margin-left: 160px !important;}
+.hero.icons-5-star-before:before{margin-left:162px;/*change both top and right padding to mirror width*/}
+/*****************************/
+/******SVG 5 STAR ICONS END********/
+/*****************************/
+
+
+/********4 1/2 Stars icon center*****/
+
+.icons-4half-star-bottom,
+.icons-4half-star-top{
+    text-align: center;
+}
+.icons-4half-star-bottom:after,
+.icons-4half-star-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcassets/icons/star-4-half.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    background-size: auto 20px ;/*change width*/
+    padding: 20px 134px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 5px auto;
+    display: table;
+    text-align: center;
+}
+
+.icons-4half-star-small-before{padding-left:95px;}
+.icons-4half-star-small-before:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-4-half.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto;
+    background-size: auto 12px;
+    padding: 7px 82px 5px 0;
+    display: table;
+    text-align: center;
+    margin: 0px 0px -14px -93px;
+}
+
+/******4 1/2 Stars Individual styles*******/
+/*4 1/2 Stars Icon size*/
+h2.icons-4half-star-after:after,h3.icons-4half-star-after:after,h4.icons-4half-star-after:after,
+h2.icons-4half-star-before:before,h3.icons-4half-star-before:before,h4.icons-4half-star-before:before,
+h2.icons-4half-star-bottom:after,h3.icons-4half-star-bottom:after,h4.icons-4half-star-bottom:after,
+h2.icons-4half5-star-top:before,h3.icons-4half-star-top:before,h4.icons-4half-star-top:before,
+.hero.icons-4half-star-before:before, .hero.icons-4half-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*4 1/2 Stars padding change */
+h2.icons-4half-star-before:before,h3.icons-4half-star-before:before,h4.icons-4half-star-before:before,
+h2.icons-4half-star-bottom:after,h3.icons-4half-star-bottom:after,h4.icons-4half-star-bottom:after,
+h2.icons-4half-star-top:before,h3.icons-4half-star-top:before,h4.icons-4half-star-top:before,
+.hero.icons-4half-star-before:before,.hero.icons-4half-star-after:after{
+    padding: 24px 24px 0px 134px;/*change both top and right padding to mirror width*/
+}
+/*4 1/2 Stars height and gap alignment*/
+h2.icons-4half-star-before:before {margin: 3px 0px 0px -167px;}
+h3.icons-4half-star-before:before {margin: 0px 0px 0px -167px;}
+h4.icons-4half-star-before:before {margin: -3px 0px 0px -167px;}
+h5.icons-4half-star-before:before {margin: 0px 0px 0px -138px;}
+h6.icons-4half-star-before:before {margin: -1px 0px 0px -138px;}   
+
+p.icons-4half-star-after:after {margin: -4px 0px 0px 8px;}
+a.icons-4half-star-after:after {margin: -4px 0px 0px 6px;}
+h2.icons-4half-star-after:after {margin-top: 3px;}
+h3.icons-4half-star-after:after {margin-top: 1px;}
+h4.icons-4half-star-after:after {margin-top: -2px;}
+
+h2.icons-4half-star-after:after,h3.icons-4half-star-after:after,h4.icons-4half-star-after:after {
+    padding: 24px 0px 0px 159px;}
+/*hero*/
+h5.hero.icons-4half-star-before,h6.hero.icons-4half-star-before {
+    margin-left: 166px !important;
+}
+h5.hero.icons-4half-star-before::before,h6.hero.icons-4half-star-before::before {
+   margin: 0px 0px 0px -164px;
+}   
+         
+a.hero.icons-4half-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-4half-star-before:before {margin: -7px 0px 0px -167px;}
+p.icons-4half-star-before {margin-left: 142px !important;}
+
+p.hero.icons-4half-star-before {margin-left: 160px !important;}
+.hero.icons-4half-star-before:before{margin-left:162px;/*change both top and right padding to mirror width*/}
+/*****************************/
+/******SVG 4 1/2 STAR ICONS END********/
+/*****************************/
+
+
+/*********4 Stars ICONS*********/
+/*Icon 4 Stars Default CSS Medium*/
+.icons-4-star-before{
+    margin-left:0px!important;
+}
+            
+.icons-4-star-after:after,
+.icons-4-star-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size:auto 20px ;/*change width*/
+}
+
+.icons-4-star-after:after {
+    padding: 20px 0px 0px 84px;/*change both top and right padding to mirror width*/
+    margin: -1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-4-star-before:before {
+    padding: 20px 20px 0px 84px;/*change both top and right padding to mirror width*/
+    margin: -2px 0px 0px -110px;
+    display: inline-flex;
+}
+a.icons-4-star-before:before { /*if class added to an anchor*/
+    margin-top: -5px;
+    margin-left: 121px;
+}
+
+/*left alignment*/
+h2.icons-4-star-before,h3.icons-4-star-before,h4.icons-4-star-before {
+    margin-left: 138px !important;
+}
+h5.icons-4-star-before,h6.icons-4-star-before {
+    margin-left: 117px !important;
+}
+
+
+/********4 Stars icon center*****/
+
+.icons-4-star-bottom,
+.icons-4-star-top{
+    text-align: center;
+}
+.icons-4-star-bottom:after,
+.icons-4-star-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    background-size: auto 20px ;/*change width*/
+    padding: 20px 104px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 5px auto;
+    display: table;
+    text-align: center;
+}
+
+/******4 Stars Individual styles*******/
+/*4 Stars Icon size*/
+h2.icons-4-star-after:after,h3.icons-4-star-after:after,h4.icons-4-star-after:after,
+h2.icons-4-star-before:before,h3.icons-4-star-before:before,h4.icons-4-star-before:before,
+h2.icons-4-star-bottom:after,h3.icons-4-star-bottom:after,h4.icons-4-star-bottom:after,
+h2.icons-4-star-top:before,h3.icons-4-star-top:before,h4.icons-4-star-top:before,
+.hero.icons-4-star-before:before, .hero.icons-4-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*4 Stars padding change */
+h2.icons-4-star-before:before,h3.icons-4-star-before:before,h4.icons-4-star-before:before,
+h2.icons-4-star-bottom:after,h3.icons-4-star-bottom:after,h4.icons-4-star-bottom:after,
+h2.icons-4-star-top:before,h3.icons-4-star-top:before,h4.icons-4-star-top:before,
+.hero.icons-4-star-before:before,.hero.icons-4-star-after:after{
+    padding: 24px 24px 0px 101px;/*change both top and right padding to mirror width*/
+}
+/*4 Stars height and gap alignment*/
+h2.icons-4-star-before:before {margin: 4px 0px 0px -134px;}
+h3.icons-4-star-before:before {margin: 2px 0px 0px -134px;}
+h4.icons-4-star-before:before {margin: -1px 0px 0px -134px;}
+h5.icons-4-star-before:before {margin: 0px 0px 0px -112px;}
+h6.icons-4-star-before:before {margin: 0px 0px 0px -112px;}   
+         
+a.icons-4-star-after::after {margin: -4px 0px 0px 6px;}
+
+h2.icons-4-star-after::after {margin-top: 2px;}
+h3.icons-5-star-after::after {margin-top: 1px;}
+h4.icons-5-star-after::after {margin-top: -3px;}
+
+h2.icons-4-star-after:after,h3.icons-4-star-after:after,h4.icons-4-star-after:after {
+    padding: 24px 0px 0px 125px;}
+/*hero*/
+h5.hero.icons-4-star-before,h6.hero.icons-4-star-before {
+    margin-left: 130px !important;
+}
+h5.hero.icons-4-star-before::before,h6.hero.icons-4-star-before::before {
+   margin: 0px 0px 0px -127px;
+}   
+         
+a.hero.icons-4-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-4-star-before:before {margin-left:-129px;}
+
+p.icons-4-star-before {margin-left: 110px !important;}
+p.hero.icons-4-star-before {margin-left: 95px !important;}  
+p.hero.icons-4-star-before {margin-left: 130px !important;}
+/*****************************/
+/******SVG 4 STAR ICONS END********/
+/*****************************/
+/*********3 Stars ICONS*********/
+/*Icon 3 Stars Default CSS Medium*/
+.icons-3-star-before{
+    margin-left:0px!important;
+}       
+.icons-3-star-after:after,
+.icons-3-star-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size:auto 20px ;/*change width*/
+}
+
+.icons-3-star-after:after {
+    padding: 20px 0px 0px 77px;/*change both top and right padding to mirror width*/
+    margin: -1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-3-star-before:before {
+    padding: 20px 20px 0px 57px;/*change both top and right padding to mirror width*/
+    margin: -2px 0px 0px -83px;
+    display: inline-flex;
+}
+a.icons-3-star-before:before { /*if class added to an anchor*/
+    margin-top: -5px;
+    margin-left: 121px;
+}
+
+/*left alignment*/
+h2.icons-3-star-before,h3.icons-3-star-before,h4.icons-3-star-before {
+    margin-left: 102px !important;
+}
+h5.icons-3-star-before,h6.icons-3-star-before {
+    margin-left: 96px !important;
+}
+
+
+/********3 Stars icon center*****/
+
+.icons-3-star-bottom,
+.icons-3-star-top{
+    text-align: center;
+}
+.icons-3-star-bottom:after,
+.icons-3-star-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    background-size: auto 20px ;/*change width*/
+    padding: 20px 76px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 5px auto;
+    display: table;
+    text-align: center;
+}
+
+/******3 Stars Individual styles*******/
+/*3 Stars Icon size*/
+h2.icons-3-star-after:after,h3.icons-3-star-after:after,h4.icons-3-star-after:after,
+h2.icons-3-star-before:before,h3.icons-3-star-before:before,h4.icons-3-star-before:before,
+h2.icons-3-star-bottom:after,h3.icons-3-star-bottom:after,h4.icons-3-star-bottom:after,
+h2.icons-3-star-top:before,h3.icons-3-star-top:before,h4.icons-3-star-top:before,
+.hero.icons-3-star-before:before, .hero.icons-3-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*3 Stars padding change */
+h2.icons-3-star-before:before,h3.icons-3-star-before:before,h4.icons-3-star-before:before,
+h2.icons-3-star-bottom:after,h3.icons-3-star-bottom:after,h4.icons-3-star-bottom:after,
+h2.icons-3-star-top:before,h3.icons-3-star-top:before,h4.icons-3-star-top:before,
+.hero.icons-3-star-before:before,.hero.icons-3-star-after:after{
+    padding: 24px 24px 0px 68px;/*change both top and right padding to mirror width*/
+}
+/*3 Stars height and gap alignment*/
+h2.icons-3-star-before:before {margin: 3px 0px 0px -101px;}
+h3.icons-3-star-before:before {margin: 0px 0px 0px -101px;}
+h4.icons-3-star-before:before {margin: -2px 0px 0px -101px;}
+h5.icons-3-star-before:before {margin: 0px 0px 0px -90px;}
+h6.icons-3-star-before:before {margin: -2px 0px 0px -90px;}   
+            
+a.icons-3-star-after::after {margin: -4px 0px 0px 6px;}
+
+h2.icons-3-star-after:after {margin-top: 4px;}
+h3.icons-3-star-after:after {margin-top: 1px;}
+h4.icons-3-star-after:after {margin-top: -2px;}
+h5.icons-3-star-after:after {margin-top: 0px;}
+h6.icons-3-star-after:after {margin-top: -1px;}
+
+
+h2.icons-3-star-after:after,h3.icons-3-star-after:after,h4.icons-3-star-after:after {
+    padding: 24px 0px 0px 91px;}
+/*hero*/
+h5.hero.icons-3-star-before,h6.hero.icons-3-star-before {
+    margin-left: 103px !important;
+}
+h5.hero.icons-3-star-before::before,h6.hero.icons-3-star-before::before {
+   margin: 0px 0px 0px -101px;
+}   
+         
+a.hero.icons-3-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-3-star-before:before {margin: -7px 0px 0px -167px;}
+
+p.icons-3-star-before {margin-left: 84px !important;}     
+p.hero.icons-3-star-before {margin-left: 95px !important;}            
+
+
+/*****************************/
+/******SVG 3 STAR ICONS END********/
+/*****************************/
+
+
+/*********3 Stars ICONS*********/
+/*Icon 3 Stars Default CSS Medium*/
+.icons-3-star-before{
+    margin-left:0px!important;
+}       
+.icons-3-star-after:after,
+.icons-3-star-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size:auto 20px ;/*change width*/
+}
+
+.icons-3-star-after:after {
+    padding: 20px 0px 0px 77px;/*change both top and right padding to mirror width*/
+    margin: -1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-3-star-before:before {
+    padding: 20px 20px 0px 57px;/*change both top and right padding to mirror width*/
+    margin: -2px 0px 0px -83px;
+    display: inline-flex;
+}
+a.icons-3-star-before:before { /*if class added to an anchor*/
+    margin-top: -5px;
+    margin-left: 121px;
+}
+
+/*left alignment*/
+h2.icons-3-star-before,h3.icons-3-star-before,h4.icons-3-star-before {
+    margin-left: 102px !important;
+}
+h5.icons-3-star-before,h6.icons-3-star-before {
+    margin-left: 96px !important;
+}
+
+
+
+
+
+/*********5 Stars MEDIUM ICONS*********/
+/*Icon 5 Stars Default CSS Medium*/
+.icons-m-5-star-before{
+    margin-left:0px!important;
+}
+            
+.icons-m-5-star-after:after,
+.icons-m-5-star-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size:auto 20px ;/*change width*/
+}
+
+.icons-m-5-star-after:after {
+    padding: 24px 0px 0px 134px;/*change both top and right padding to mirror width*/
+    margin: -1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-m-5-star-before:before {
+    padding: 20px 20px 0px 138px;/*change both top and right padding to mirror width*/
+    margin: -2px 0px 0px -140px;
+    display: inline-flex;
+}
+a.icons-m-5-star-before:before { /*if class added to an anchor*/
+    margin-top: -5px;
+    margin-left: 121px;
+}
+
+/*left alignment*/
+h2.icons-m-5-star-before,h3.icons-m-5-star-before,h4.icons-m-5-star-before {
+    margin-left: 169px !important;
+}
+h5.icons-m-5-star-before,h6.icons-m-5-star-before {
+    margin-left: 142px !important;
+}
+
+
+/********5 Stars MEDIUM icon center*****/
+
+.icons-m-5-star-bottom,
+.icons-m-5-star-top{
+    text-align: center;
+}
+.icons-m-5-star-bottom:after,
+.icons-m-5-star-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    background-size: auto 16px ;/*change width*/
+    padding: 24px 105px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 5px auto;
+    display: table;
+    text-align: center;
+}
+
+.icons-m-5-star-bottom:after{
+    padding: 16px 105px 0px 0px;
+    margin: 16px auto;
+}
+
+/******5 Stars MEDIUM Individual styles*******/
+/*5 Stars Icon size*/
+h2.icons-m-5-star-after:after,h3.icons-m-5-star-after:after,h4.icons-m-5-star-after:after,
+h2.icons-m-5-star-before:before,h3.icons-m-5-star-before:before,h4.icons-m-5-star-before:before,
+h2.icons-m-5-star-bottom:after,h3.icons-m-5-star-bottom:after,h4.icons-m-5-star-bottom:after,
+h2.icons-m-5-star-top:before,h3.icons-m-5-star-top:before,h4.icons-m-5-star-top:before,
+.hero.icons-m-5-star-before:before, .hero.icons-m-5-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*5 Stars padding change */
+h2.icons-m-5-star-before:before,h3.icons-m-5-star-before:before,h4.icons-m-5-star-before:before,
+h2.icons-m-5-star-bottom:after,h3.icons-m-5-star-bottom:after,h4.icons-m-5-star-bottom:after,
+h2.icons-m-5-star-top:before,h3.icons-m-5-star-top:before,h4.icons-m-5-star-top:before,
+.hero.icons-m-5-star-before:before,.hero.icons-m-5-star-after:after{
+    padding: 24px 24px 0px 134px;/*change both top and right padding to mirror width*/
+}
+/*5 Stars height and gap alignment*/
+h2.icons-m-5-star-before:before {margin: 3px 0px 0px -167px;}
+h3.icons-m-5-star-before:before {margin: 0px 0px 0px -167px;}
+h4.icons-m-5-star-before:before {margin: -3px 0px 0px -167px;}
+h5.icons-m-5-star-before:before {margin: 0px 0px 0px -138px;}
+h6.icons-m-5-star-before:before {margin: -1px 0px 0px -138px;}   
+
+p.icons-m-5-star-after:after {margin: -4px 0px 0px 8px;}
+a.icons-m-5-star-after:after {margin: -4px 0px 0px 6px;}
+h2.icons-m-5-star-after:after {margin-top: 3px;}
+h3.icons-m-5-star-after:after {margin-top: 1px;}
+h4.icons-m-5-star-after:after {margin-top: -2px;}
+
+h2.icons-m-5-star-after:after,h3.icons-m-5-star-after:after,h4.icons-m-5-star-after:after {
+    padding: 24px 0px 0px 159px;}
+/*hero*/
+h5.hero.icons-m-5-star-before,h6.hero.icons-m-5-star-before {
+    margin-left: 166px !important;
+}
+h5.hero.icons-m-5-star-before::before,h6.hero.icons-m-5-star-before::before {
+   margin: 0px 0px 0px -164px;
+}   
+         
+a.hero.icons-m-5-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-m-5-star-before:before {margin: -7px 0px 0px -167px;}
+p.icons-m-5-star-before {margin-left: 142px !important;}
+
+p.hero.icons-m-5-star-before {margin-left: 160px !important;}
+.hero.icons-m-5-star-before:before{margin-left:162px;/*change both top and right padding to mirror width*/}
+/*****************************/
+/******SVG 5 STAR MEDIUM ICONS END********/
+/*****************************/
+
+
+
+/********4 1/2 Stars icon center*****/
+
+.icons-m-4half-star-bottom,
+.icons-m-4half-star-top{
+    text-align: center;
+}
+.icons-m-4half-star-bottom:after,
+.icons-m-4half-star-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-4-half.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    background-size: auto 16px ;/*change width*/
+    padding: 16px 106px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 16px auto;
+    display: table;
+    text-align: center;
+}
+
+/******4 1/2 Stars Individual styles*******/
+/*4 1/2 Stars Icon size*/
+h2.icons-m-4half-star-after:after,h3.icons-m-4half-star-after:after,h4.icons-m-4half-star-after:after,
+h2.icons-m-4half-star-before:before,h3.icons-m-4half-star-before:before,h4.icons-m-4half-star-before:before,
+h2.icons-m-4half-star-bottom:after,h3.icons-m-4half-star-bottom:after,h4.icons-m-4half-star-bottom:after,
+h2.icons-m-4half5-star-top:before,h3.icons-m-4half-star-top:before,h4.icons-m-4half-star-top:before,
+.hero.icons-m-4half-star-before:before, .hero.icons-m-4half-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*4 1/2 Stars padding change */
+h2.icons-m-4half-star-before:before,h3.icons-m-4half-star-before:before,h4.icons-m-4half-star-before:before,
+h2.icons-m-4half-star-bottom:after,h3.icons-m-4half-star-bottom:after,h4.icons-m-4half-star-bottom:after,
+h2.icons-m-4half-star-top:before,h3.icons-m-4half-star-top:before,h4.icons-m-4half-star-top:before,
+.hero.icons-m-4half-star-before:before,.hero.icons-m-4half-star-after:after{
+    padding: 24px 24px 0px 134px;/*change both top and right padding to mirror width*/
+}
+/*4 1/2 Stars height and gap alignment*/
+h2.icons-m-4half-star-before:before {margin: 3px 0px 0px -167px;}
+h3.icons-m-4half-star-before:before {margin: 0px 0px 0px -167px;}
+h4.icons-m-4half-star-before:before {margin: -3px 0px 0px -167px;}
+h5.icons-m-4half-star-before:before {margin: 0px 0px 0px -138px;}
+h6.icons-m-4half-star-before:before {margin: -1px 0px 0px -138px;}   
+
+p.icons-m-4half-star-after:after {margin: -4px 0px 0px 8px;}
+a.icons-m-4half-star-after:after {margin: -4px 0px 0px 6px;}
+h2.icons-m-4half-star-after:after {margin-top: 3px;}
+h3.icons-m-4half-star-after:after {margin-top: 1px;}
+h4.icons-m-4half-star-after:after {margin-top: -2px;}
+
+h2.icons-m-4half-star-after:after,h3.icons-m-4half-star-after:after,h4.icons-m-4half-star-after:after {
+    padding: 24px 0px 0px 159px;}
+/*hero*/
+h5.hero.icons-m-4half-star-before,h6.hero.icons-m-4half-star-before {
+    margin-left: 166px !important;
+}
+h5.hero.icons-m-4half-star-before::before,h6.hero.icons-m-4half-star-before::before {
+   margin: 0px 0px 0px -164px;
+}   
+         
+a.hero.icons-m-4half-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-m-4half-star-before:before {margin: -7px 0px 0px -167px;}
+p.icons-m-4half-star-before {margin-left: 142px !important;}
+
+p.hero.icons-m-4half-star-before {margin-left: 160px !important;}
+.hero.icons-m-4half-star-before:before{margin-left:162px;/*change both top and right padding to mirror width*/}
+/*****************************/
+/******SVG 4 1/2 STAR ICONS END********/
+/*****************************/
+
+
+
+/*********4 Stars MEDIUM ICONS*********/
+/*Icon 4 Stars Default CSS Medium*/
+.icons-m-4-star-before{
+    margin-left:0px!important;
+}
+            
+.icons-m-4-star-after:after,
+.icons-m-4-star-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size:auto 20px ;/*change width*/
+}
+
+.icons-m-4-star-after:after {
+    padding: 20px 0px 0px 84px;/*change both top and right padding to mirror width*/
+    margin: -1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-m-4-star-before:before {
+    padding: 20px 20px 0px 84px;/*change both top and right padding to mirror width*/
+    margin: -2px 0px 0px -110px;
+    display: inline-flex;
+}
+a.icons-m-4-star-before:before { /*if class added to an anchor*/
+    margin-top: -5px;
+    margin-left: 121px;
+}
+
+/*left alignment*/
+h2.icons-m-4-star-before,h3.icons-4-star-before,h4.icons-4-star-before {
+    margin-left: 138px !important;
+}
+h5.icons-m-4-star-before,h6.icons-4-star-before {
+    margin-left: 117px !important;
+}
+
+
+/********4 Stars icon center*****/
+
+.icons-m-4-star-bottom,
+.icons-m-4-star-top{
+    text-align: center;
+}
+.icons-m-4-star-bottom:after,
+.icons-m-4-star-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    background-size: auto 16px ;/*change width*/
+    padding: 16px 83px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 13px auto;
+    display: table;
+    text-align: center;
+}
+
+.icons-m-4-star-bottom:after {
+    padding-top: 16px;/*change both top and right padding to mirror width*/
+    margin: 16px auto;
+}
+
+/******4 Stars Individual styles*******/
+/*4 Stars Icon size*/
+h2.icons-m-4-star-after:after,h3.icons-m-4-star-after:after,h4.icons-m-4-star-after:after,
+h2.icons-m-4-star-before:before,h3.icons-m-4-star-before:before,h4.icons-m-4-star-before:before,
+h2.icons-m-4-star-bottom:after,h3.icons-m-4-star-bottom:after,h4.icons-m-4-star-bottom:after,
+h2.icons-m-4-star-top:before,h3.icons-m-4-star-top:before,h4.icons-m-4-star-top:before,
+.hero.icons-m-4-star-before:before, .hero.icons-m-4-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*4 Stars padding change */
+h2.icons-m-4-star-before:before,h3.icons-m-4-star-before:before,h4.icons-m-4-star-before:before,
+h2.icons-m-4-star-bottom:after,h3.icons-4-star-bottom:after,h4.icons-m-4-star-bottom:after,
+h2.icons-m-4-star-top:before,h3.icons-4-star-top:before,h4.icons-4-star-top:before,
+.hero.icons-m-4-star-before:before,.hero.icons-m-4-star-after:after{
+    padding: 24px 24px 0px 101px;/*change both top and right padding to mirror width*/
+}
+/*4 Stars height and gap alignment*/
+h2.icons-m-4-star-before:before {margin: 4px 0px 0px -134px;}
+h3.icons-m-4-star-before:before {margin: 2px 0px 0px -134px;}
+h4.icons-m-4-star-before:before {margin: -1px 0px 0px -134px;}
+h5.icons-m-4-star-before:before {margin: 0px 0px 0px -112px;}
+h6.icons-m-4-star-before:before {margin: 0px 0px 0px -112px;}   
+         
+a.icons-m-4-star-after::after {margin: -4px 0px 0px 6px;}
+
+h2.icons-m-4-star-after::after {margin-top: 2px;}
+h3.icons-m-5-star-after::after {margin-top: 1px;}
+h4.icons-m-5-star-after::after {margin-top: -3px;}
+
+h2.icons-m-4-star-after:after,h3.icons-m-4-star-after:after,h4.icons-m-4-star-after:after {
+    padding: 24px 0px 0px 125px;}
+/*hero*/
+h5.hero.icons-m-4-star-before,h6.hero.icons-m-4-star-before {
+    margin-left: 130px !important;
+}
+h5.hero.icons-m-4-star-before::before,h6.hero.icons-m-4-star-before::before {
+   margin: 0px 0px 0px -127px;
+}   
+         
+a.hero.icons-m-4-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-m-4-star-before:before {margin-left:-129px;}
+
+p.icons-m-4-star-before {margin-left: 110px !important;}
+p.hero.icons-m-4-star-before {margin-left: 95px !important;}  
+p.hero.icons-m-4-star-before {margin-left: 130px !important;}
+/*****************************/
+/******SVG 4 MEDIUM STAR ICONS END********/
+/*****************************/
+
+
+
+
+
+/*********5 Stars SMALL ICONS*********/
+/*Icon 5 Stars Default CSS SMALL*/
+.icons-s-5-star-before{
+    margin-left:0px!important;
+}
+            
+.icons-s-5-star-after:after,
+.icons-s-5-star-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size:auto 20px ;/*change width*/
+}
+
+.icons-s-5-star-after:after {
+    padding: 24px 0px 0px 134px;/*change both top and right padding to mirror width*/
+    margin: -1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-s-5-star-before:before {
+    padding: 20px 20px 0px 138px;/*change both top and right padding to mirror width*/
+    margin: -2px 0px 0px -140px;
+    display: inline-flex;
+}
+a.icons-s-5-star-before:before { /*if class added to an anchor*/
+    margin-top: -5px;
+    margin-left: 121px;
+}
+
+/*left alignment*/
+h2.icons-s-5-star-before,h3.icons-s-5-star-before,h4.icons-s-5-star-before {
+    margin-left: 169px !important;
+}
+h5.icons-s-5-star-before,h6.icons-s-5-star-before {
+    margin-left: 142px !important;
+}
+
+
+/********5 Stars SMALL icon center*****/
+
+.icons-s-5-star-bottom,
+.icons-s-5-star-top{
+    text-align: center;
+}
+.icons-s-5-star-bottom:after,
+.icons-s-5-star-top:before {
+        content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-5.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: 4px;
+    background-size: auto 17px !important;/*change width*/
+    padding: 13px 111px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 0px auto 8px;
+    display: table;
+    text-align: center;
+}
+
+.icons-s-5-star-bottom:after{
+    padding: 16px 105px 0px 0px;
+    margin: 16px auto;
+}
+
+/******5 Stars SMALL Individual styles*******/
+/*5 Stars Icon size*/
+h2.icons-s-5-star-after:after,h3.icons-s-5-star-after:after,h4.icons-s-5-star-after:after,
+h2.icons-s-5-star-before:before,h3.icons-s-5-star-before:before,h4.icons-s-5-star-before:before,
+h2.icons-s-5-star-bottom:after,h3.icons-s-5-star-bottom:after,h4.icons-s-5-star-bottom:after,
+h2.icons-s-5-star-top:before,h3.icons-s-5-star-top:before,h4.icons-s-5-star-top:before,
+.hero.icons-s-5-star-before:before, .hero.icons-s-5-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*5 Stars padding change */
+h2.icons-s-5-star-before:before,h3.icons-s-5-star-before:before,h4.icons-s-5-star-before:before,
+h2.icons-s-5-star-bottom:after,h3.icons-s-5-star-bottom:after,h4.icons-s-5-star-bottom:after,
+h2.icons-s-5-star-top:before,h3.icons-s-5-star-top:before,h4.icons-s-5-star-top:before,
+.hero.icons-s-5-star-before:before,.hero.icons-s-5-star-after:after{
+    padding: 15px 24px 0px 90px;/*change both top and right padding to mirror width*/
+}
+/*5 Stars height and gap alignment*/
+h2.icons-s-5-star-before:before {margin: 3px 0px 0px -167px;}
+h3.icons-s-5-star-before:before {margin: 0px 0px 0px -167px;}
+h4.icons-s-5-star-before:before {margin: -3px 0px 0px -167px;}
+h5.icons-s-5-star-before:before {margin: 0px 0px 0px -138px;}
+h6.icons-s-5-star-before:before {margin: -1px 0px 0px -138px;}   
+
+p.icons-s-5-star-after:after {margin: -4px 0px 0px 8px;}
+a.icons-s-5-star-after:after {margin: -4px 0px 0px 6px;}
+h2.icons-s-5-star-after:after {margin-top: 3px;}
+h3.icons-s-5-star-after:after {margin-top: 1px;}
+h4.icons-s-5-star-after:after {margin-top: -2px;}
+
+h2.icons-s-5-star-after:after,h3.icons-s-5-star-after:after,h4.icons-s-5-star-after:after {
+    padding: 24px 0px 0px 159px;}
+/*hero*/
+h5.hero.icons-s-5-star-before,h6.hero.icons-s-5-star-before {
+    margin-left: 166px !important;
+}
+h5.hero.icons-s-5-star-before::before,h6.hero.icons-s-5-star-before::before {
+   margin: 0px 0px 0px -164px;
+}   
+         
+a.hero.icons-s-5-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-s-5-star-before:before {margin: -7px 0px 0px -167px;}
+p.icons-s-5-star-before {margin-left: 142px !important;}
+
+p.hero.icons-s-5-star-before {margin-left: 160px !important;}
+.hero.icons-s-5-star-before:before{margin-left:162px;/*change both top and right padding to mirror width*/}
+/*****************************/
+/******SVG 5 STAR SMALL ICONS END********/
+/*****************************/
+
+
+
+/********4 1/2 Stars icon center*****/
+
+.icons-s-4half-star-bottom,
+.icons-s-4half-star-top{
+    text-align: center;
+}
+.icons-s-4half-star-bottom:after,
+.icons-s-4half-star-top:before {
+        content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/icon-star-4-half.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: 4px;
+    background-size: auto 17px !important;/*change width*/
+    padding: 13px 111px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 0px auto 8px;
+    display: table;
+    text-align: center;
+}
+
+/******4 1/2 Stars Individual styles*******/
+/*4 1/2 Stars Icon size*/
+h2.icons-s-4half-star-after:after,h3.icons-s-4half-star-after:after,h4.icons-s-4half-star-after:after,
+h2.icons-s-4half-star-before:before,h3.icons-s-4half-star-before:before,h4.icons-s-4half-star-before:before,
+h2.icons-s-4half-star-bottom:after,h3.icons-s-4half-star-bottom:after,h4.icons-s-4half-star-bottom:after,
+h2.icons-s-4half5-star-top:before,h3.icons-s-4half-star-top:before,h4.icons-s-4half-star-top:before,
+.hero.icons-s-4half-star-before:before, .hero.icons-s-4half-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*4 1/2 Stars padding change */
+h2.icons-s-4half-star-before:before,h3.icons-s-4half-star-before:before,h4.icons-s-4half-star-before:before,
+h2.icons-s-4half-star-bottom:after,h3.icons-s-4half-star-bottom:after,h4.icons-s-4half-star-bottom:after,
+h2.icons-s-4half-star-top:before,h3.icons-s-4half-star-top:before,h4.icons-s-4half-star-top:before,
+.hero.icons-s-4half-star-before:before,.hero.icons-s-4half-star-after:after{
+    padding: 14px 24px 0px 89px;/*change both top and right padding to mirror width*/
+}
+/*4 1/2 Stars height and gap alignment*/
+h2.icons-s-4half-star-before:before {margin: 3px 0px 0px -167px;}
+h3.icons-s-4half-star-before:before {margin: 0px 0px 0px -167px;}
+h4.icons-s-4half-star-before:before {margin: -3px 0px 0px -167px;}
+h5.icons-s-4half-star-before:before {margin: 0px 0px 0px -138px;}
+h6.icons-s-4half-star-before:before {margin: -1px 0px 0px -138px;}   
+
+p.icons-s-4half-star-after:after {margin: -4px 0px 0px 8px;}
+a.icons-s-4half-star-after:after {margin: -4px 0px 0px 6px;}
+h2.icons-s-4half-star-after:after {margin-top: 3px;}
+h3.icons-s-4half-star-after:after {margin-top: 1px;}
+h4.icons-s-4half-star-after:after {margin-top: -2px;}
+
+h2.icons-s-4half-star-after:after,h3.icons-s-4half-star-after:after,h4.icons-s-4half-star-after:after {
+    padding: 24px 0px 0px 159px;}
+/*hero*/
+h5.hero.icons-s-4half-star-before,h6.hero.icons-s-4half-star-before {
+    margin-left: 166px !important;
+}
+h5.hero.icons-s-4half-star-before::before,h6.hero.icons-s-4half-star-before::before {
+   margin: 0px 0px 0px -164px;
+}   
+         
+a.hero.icons-s-4half-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-s-4half-star-before:before {margin: -7px 0px 0px -167px;}
+p.icons-s-4half-star-before {margin-left: 142px !important;}
+
+p.hero.icons-s-4half-star-before {margin-left: 160px !important;}
+.hero.icons-s-4half-star-before:before{margin-left:162px;/*change both top and right padding to mirror width*/}
+/*****************************/
+/******SVG 4 1/2 STAR ICONS END********/
+/*****************************/
+
+
+
+/*********4 Stars SMALL ICONS*********/
+/*Icon 4 Stars Default CSS SMALL*/
+.icons-s-4-star-before{
+    margin-left:0px!important;
+}
+            
+.icons-s-4-star-after:after,
+.icons-s-4-star-before:before{
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-4.svg") ;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: auto; 
+    position: absolute;
+    background-size:auto 20px ;/*change width*/
+}
+
+.icons-s-4-star-after:after {
+    padding: 20px 0px 0px 84px;/*change both top and right padding to mirror width*/
+    margin: -1px 0px 0px 6px;/*change height position*/
+}
+
+.icons-s-4-star-before:before {
+    padding: 20px 20px 0px 84px;/*change both top and right padding to mirror width*/
+    margin: -2px 0px 0px -110px;
+    display: inline-flex;
+}
+a.icons-s-4-star-before:before { /*if class added to an anchor*/
+    margin-top: -5px;
+    margin-left: 121px;
+}
+
+/*left alignment*/
+h2.icons-s-4-star-before,h3.icons-4-star-before,h4.icons-4-star-before {
+    margin-left: 138px !important;
+}
+h5.icons-s-4-star-before,h6.icons-4-star-before {
+    margin-left: 117px !important;
+}
+
+
+/********4 Stars icon center*****/
+
+.icons-s-4-star-bottom,
+.icons-s-4-star-top{
+    text-align: center;
+}
+.icons-s-4-star-bottom:after,
+.icons-s-4-star-top:before {
+    content: "";
+    background-image: url("http://c1.sainsburys.co.uk/wcsstore7.23.1.52/SainsburysStorefrontAssetStore/wcassets/icons/star-4.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    width: auto;
+    height: 4px;
+    background-size: auto 17px !important;/*change width*/
+    padding: 13px 111px 0px 0px;/*change both top and right padding to mirror width*/
+    margin: 0px auto 8px;
+    display: table;
+    text-align: center;
+
+}
+
+.icons-s-4-star-bottom:after {
+    padding-top: 16px;/*change both top and right padding to mirror width*/
+    margin: 16px auto;
+}
+
+/******4 Stars Individual styles*******/
+/*4 Stars Icon size*/
+h2.icons-s-4-star-after:after,h3.icons-s-4-star-after:after,h4.icons-s-4-star-after:after,
+h2.icons-s-4-star-before:before,h3.icons-s-4-star-before:before,h4.icons-s-4-star-before:before,
+h2.icons-s-4-star-bottom:after,h3.icons-s-4-star-bottom:after,h4.icons-s-4-star-bottom:after,
+h2.icons-s-4-star-top:before,h3.icons-s-4-star-top:before,h4.icons-s-4-star-top:before,
+.hero.icons-s-4-star-before:before, .hero.icons-s-4-star-after:after{
+     background-size: auto 24px ;/*change width*/
+}  
+/*4 Stars padding change */
+h2.icons-s-4-star-before:before,h3.icons-s-4-star-before:before,h4.icons-s-4-star-before:before,
+h2.icons-s-4-star-bottom:after,h3.icons-4-star-bottom:after,h4.icons-s-4-star-bottom:after,
+h2.icons-s-4-star-top:before,h3.icons-4-star-top:before,h4.icons-4-star-top:before,
+.hero.icons-s-4-star-before:before,.hero.icons-s-4-star-after:after{
+    padding: 24px 24px 0px 101px;/*change both top and right padding to mirror width*/
+}
+/*4 Stars height and gap alignment*/
+h2.icons-s-4-star-before:before {margin: 4px 0px 0px -134px;}
+h3.icons-s-4-star-before:before {margin: 2px 0px 0px -134px;}
+h4.icons-s-4-star-before:before {margin: -1px 0px 0px -134px;}
+h5.icons-s-4-star-before:before {margin: 0px 0px 0px -112px;}
+h6.icons-s-4-star-before:before {margin: 0px 0px 0px -112px;}   
+         
+a.icons-s-4-star-after::after {margin: -4px 0px 0px 6px;}
+
+h2.icons-s-4-star-after::after {margin-top: 2px;}
+h3.icons-s-5-star-after::after {margin-top: 1px;}
+h4.icons-s-5-star-after::after {margin-top: -3px;}
+
+h2.icons-s-4-star-after:after,h3.icons-s-4-star-after:after,h4.icons-s-4-star-after:after {
+    padding: 24px 0px 0px 125px;}
+/*hero*/
+h5.hero.icons-s-4-star-before,h6.hero.icons-s-4-star-before {
+    margin-left: 130px !important;
+}
+h5.hero.icons-s-4-star-before::before,h6.hero.icons-s-4-star-before::before {
+   margin: 0px 0px 0px -127px;
+}   
+         
+a.hero.icons-s-4-star-after::after {margin: -6px 0px 0px 6px;}
+a.hero.icons-s-4-star-before:before {margin-left:-129px;}
+
+p.icons-s-4-star-before {margin-left: 110px !important;}
+p.hero.icons-s-4-star-before {margin-left: 95px !important;}  
+p.hero.icons-s-4-star-before {margin-left: 130px !important;}
+/*****************************/
+/******SVG 4 SMALL STAR ICONS END********/
+/*****************************/
+
+
+
+
+
+/********* GOL Video *********/
+/*Video for to of page with text overlay*/
+#gol-video-body{
+    position: relative;
+    height: 476px;/*will need video specific heights in conditional css within teamsite pages*/
+}
+
+#gol-video-body video.gol-video{
+    position: absolute;
+    max-width: auto;
+    width: auto;
+    height: auto;
+    background: url('http://c1.sainsburys.co.uk/wcassets/themes/video/bg-video.jpg') no-repeat;
+    background-size: cover;
+}
+
+#gol-video-body div.es-border-box:nth-child(2){
+    position: absolute;
+}
+
+/*Video for beacon*/
+
+#gol-video-body-beacon{
+    position: relative;
+    height: 476px;
+    margin-left: 219px;
+}
+
+div#gol-video-body-beacon div.es {
+    position: absolute;
+}
+
+#gol-video-body-beacon video.gol-video{
+    position: absolute;
+    max-width: auto;
+    width: auto;
+    height: auto;
+    background: url('http://c1.sainsburys.co.uk/wcassets/themes/video/bg-video-beacon.jpg') no-repeat;
+    background-size: cover;
+}
+
+
+/* to be used with no text video will scale */
+
+#gol-video-body-scale video.gol-video-scale {
+    position: relative;
+    max-width: 100%;
+    max-height: auto;
+    width: auto;
+    height: auto;
+    background: url('http://c1.sainsburys.co.uk/wcassets/themes/video/bg-video.jpg') no-repeat;
+    background-size: cover;
+}
+/********* GOL Video END *********/
+
+/**** CHRISTMAS ******/
+
+h3.gol-xmas2015
+{
+    color:#9b0141
+}
+
+
+h3.gol-content-hero.xmas2015
+{
+    color:#333333;
+    font-size: 30px;
+}
+
+.gol-xmas-red{
+    color:#870001!important;
+}
+
+.gol-xmas-green{
+    color:#006a32!important;
+}
+
+.gol-xmas-gold{
+    color:#d1c394;
+}
+
+.gol-frontage{
+font-family: 'Frontage-Regular'!important;
+text-align:center;
+}
+
+/* Page break header*/
+/*.gol-xmas-page-break-header{
+    width: 100%; height: 9px; border-bottom: 1px solid #837240; text-align: center;
+}
+.gol-xmas-page-break-header h3{
+    font-size: 19px;font-family: 'Frontage-Regular'!important;color:#837240;
+}
+.gol-xmas-page-break-header h3 span{
+    padding: 0 15px;background:#f6f3ea;
+}*/
+
+.gol-xmas-page-break-header{
+        display: block;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap; 
+}
+.gol-xmas-page-break-header > h3 {
+        position: relative;
+        display: inline-block;
+        font-size: 19px;font-family: 'Frontage-Regular'!important;color:#837240;
+}
+.gol-xmas-page-break-header > h3.white {
+        color:#FFF;
+}
+.gol-xmas-page-break-header > h3:before,
+.gol-xmas-page-break-header > h3:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        width: 9999px;
+        height: 1px;
+        background: #837240;
+}
+
+.gol-xmas-page-break-header > h3.white:before,
+.gol-xmas-page-break-header > h3.white:after {
+        background: #FFF;
+}
+
+.gol-xmas-page-break-header > h3:before {
+        right: 100%;
+        margin-right: 15px;
+}
+
+.gol-xmas-page-break-header > h3:after {
+        left: 100%;
+        margin-left: 15px;
+}
+
+
+
+p.gol-xmas-text{
+    text-align: center; 
+    font-size: 13.5px; 
+    line-height: 23px;
+}
+
+p.hero.gol-xmas-hero{
+    line-height: 20px;
+}
+
+
+
+
+/******Window pop up********/
+
+.gol-pu-overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.gol-pu-overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 99999;
+}
+
+.gol-pu-popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 560px;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+
+
+.gol-pu-popup .gol-pu-close {
+  position: absolute;
+  top: 12px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.gol-pu-popup.darkgrey{
+  background: #2b2c30;
+  color:#FFF;
+}
+
+.gol-pu-popup h3{
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.gol-pu-popup.darkgrey h3{
+  color:#FF9900;
+}
+
+.gol-pu-popup.darkgrey p{
+  color:#FFF;
+}
+
+.gol-pu-popup.darkgrey .gol-pu-close{
+  color: #fff;
+}
+
+.gol-pu-popup .gol-pu-close:hover {
+  color: #ec0075;
+}
+.gol-pu-popup .gol-pu-content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+/******Window pop up END********/

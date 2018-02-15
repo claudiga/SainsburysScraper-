@@ -1,19 +1,14 @@
 import java.io.FileInputStream;
-import java.io.FilterInputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.net.MalformedURLException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
-
-import com.fasterxml.jackson.databind.node.JsonNodeFactory;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
 import com.sainsburys.product.Item;
 import com.sainsburys.scraper.JSONItems;
-import com.sainsburys.scraper.WebScraper;
+import com.sainsburys.scraper.HtmlUnitItemScraper;
+import com.sainsburys.scraper.ItemScraper;
 
 public class Application {
 	
@@ -36,7 +31,7 @@ public class Application {
 		
 		xpaths.load(fis);
 		
-		WebScraper wb = new WebScraper(url, xpaths);
+		ItemScraper<Item> wb = new HtmlUnitItemScraper(url, xpaths);
 		
 		List<Item> items = wb.getProductListings();
 		
@@ -44,13 +39,7 @@ public class Application {
 		
 		String itemsJsonString  = itemsJson.getItemsAsJsonString();
 	
-		System.out.println(itemsJsonString);
-				
-		
-		
-		
-		//wb.getCaloriesAndDescription("https://jsainsburyplc.github.io/serverside-test/site/www.sainsburys.co.uk/shop/gb/groceries/berries-cherries-currants/sainsburys-blackcurrants-150g.html");
-		
+		System.out.println(itemsJsonString);				
 	}
 
 }

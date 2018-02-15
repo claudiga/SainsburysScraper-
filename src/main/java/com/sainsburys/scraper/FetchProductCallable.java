@@ -6,6 +6,7 @@ import java.util.Properties;
 import java.util.concurrent.Callable;
 
 import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomElement;
@@ -19,21 +20,19 @@ import com.sainsburys.product.Item;
 
 public class FetchProductCallable implements Callable<Item> {
 	
-	
+	private final static Logger logger = LoggerFactory.getLogger(FetchProductCallable.class);
 	
 	DomElement product;
 		WebClient webClient;
-		Logger logger;
 		String url;
 		Properties xpaths;
 		
 		
-	public FetchProductCallable(DomElement product, Logger logger, String url, Properties xpaths) {
+	public FetchProductCallable(DomElement product, String url, Properties xpaths) {
 		
 		webClient = new WebClient();
 		webClient.getOptions().setThrowExceptionOnScriptError(false);
 		webClient.getOptions().setThrowExceptionOnFailingStatusCode(false);
-		this.logger = logger;
 		this.product = product;
 		this.url = url;
 		this.xpaths = xpaths;
@@ -69,10 +68,7 @@ public class FetchProductCallable implements Callable<Item> {
 		String link = productNameAndLink[1];
 
 		String itemName = productNameAndLink[0];
-
-		String[] caloriesAndDescription = null;
-
-		caloriesAndDescription = getCaloriesAndDescription(link);
+		String[] caloriesAndDescription = getCaloriesAndDescription(link);
 
 		HtmlDivision priceDiv = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("priceDivXpath"));
 
@@ -142,9 +138,7 @@ public class FetchProductCallable implements Callable<Item> {
 			logger.info(String.format("Description for item at URL: %s is missing.... Defaulting to empty string", url));
 
 		}
-		System.out.println(calories);
-
-		System.out.println(lineDescription);
+		
 
 		return new String[] { calories, lineDescription };
 

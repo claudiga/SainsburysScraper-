@@ -2,17 +2,9 @@ package com.sainsburys.scraper;
 
 import java.util.List;
 
-import com.sainsburys.product.Item;
-
-public interface ItemScraper<T,E> {
-	
-	public T getPage(String url) throws Exception;
-	
-	public Iterable<E> getProductList(T page); 
-	
-	public <Item extends Scrapeable> List<Item> getProductListings();
-	
-	//public String[] getCaloriesAndDescription(String url);
-	
+public interface ItemScraper<T extends Scrapeable> {
+			
+	public  List<T> getProductListings();
+		
 
 }
