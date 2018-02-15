@@ -77,7 +77,7 @@ public class TestScraper {
 		JSONItems js = new JSONItems(items);
 
 		BigDecimal total = js.getTotal();
-
+		
 		assertEquals("5.00", total.toPlainString());
 
 	}

@@ -2,6 +2,7 @@ package com.sainsburys.scraper;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Iterator;
 import java.util.List;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -41,21 +42,39 @@ public class JSONItems {
 
 	public String getItemsAsJsonString() {
 
-		ObjectNode obectNode = new ObjectNode(nodeFactory);
+		ObjectNode objectNode = new ObjectNode(nodeFactory);
 		JsonNode itemsNode = null;
 		String output = null;
 		BigDecimal total = getTotal();
 		try {
 			itemsNode = mapper.valueToTree(items);
+			
+			Iterator<JsonNode> it = itemsNode.iterator();
+			
+			while(it.hasNext()) {
+				
+				JsonNode j = it.next();
+				
+				JsonNode k = j.get("kcal_per_100g");
+						
+				if(k.intValue() == -1) {
+					
+					ObjectNode o = (ObjectNode) j;
+					
+					o.remove("kcal_per_100g");
+				}
+				
+			}
 
-			obectNode.set("results", itemsNode);
+			objectNode.set("results", itemsNode);
 			
 			RawValue rv = new RawValue(total.toPlainString());
 			
-			obectNode.putRawValue("total", rv);
+			objectNode.putRawValue("total", rv);
 			
 			
-			output = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obectNode);
+			
+			output = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(objectNode);
 
 		} catch (JsonProcessingException e) {
 

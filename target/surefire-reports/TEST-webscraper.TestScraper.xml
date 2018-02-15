@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="0" name="webscraper.TestScraper" time="10.514" errors="0" skipped="0">
+<testsuite tests="3" failures="0" name="webscraper.TestScraper" time="9.865" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home/jre/lib"/>
@@ -26,7 +26,7 @@
 "/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="os.name" value="Mac OS X"/>
-    <property name="classworlds.conf" value="/Users/claude/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf763181836032920877.tmp"/>
+    <property name="classworlds.conf" value="/Users/claude/eclipse-workspace/.metadata/.plugins/org.eclipse.m2e.launching/launches/m2conf1525433096843577464.tmp"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
     <property name="java.library.path" value="/Users/claude/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -62,7 +62,7 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="webscraper.TestScraper" name="testTotal" time="1.805"/>
-  <testcase classname="webscraper.TestScraper" name="testXpath" time="1.688"/>
-  <testcase classname="webscraper.TestScraper" name="testAProduct" time="7.021"/>
+  <testcase classname="webscraper.TestScraper" name="testTotal" time="1.294"/>
+  <testcase classname="webscraper.TestScraper" name="testXpath" time="1.747"/>
+  <testcase classname="webscraper.TestScraper" name="testAProduct" time="6.824"/>
 </testsuite>

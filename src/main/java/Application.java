@@ -19,7 +19,7 @@ public class Application {
 		java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF); 
 
 		if(args.length < 2 || args.length > 2) {
-			logger.error("USAGE: java -jar webscraper [path to props] [products page url]");
+			logger.error("USAGE: java -jar webscraper-0.0.1-SNAPSHOT.jar [path to props] [products page url]");
 			System.exit(1);
 		}
 		
