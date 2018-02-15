@@ -1,10 +1,10 @@
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.util.List;
 import java.util.Properties;
 import java.util.logging.Level;
-import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import com.sainsburys.product.Item;
 import com.sainsburys.scraper.JSONItems;
 import com.sainsburys.scraper.HtmlUnitItemScraper;
@@ -12,19 +12,24 @@ import com.sainsburys.scraper.ItemScraper;
 
 public class Application {
 	
+	private final static Logger logger = LoggerFactory.getLogger(HtmlUnitItemScraper.class);
 
 
-	public static void main(String[] args) throws FailingHttpStatusCodeException, MalformedURLException, IOException {
-		
-
-		
+	public static void main(String[] args) throws IOException {
 		java.util.logging.Logger.getLogger("com.gargoylesoftware").setLevel(Level.OFF); 
+
+		if(args.length < 2 || args.length > 2) {
+			logger.error("USAGE: java -jar webscraper [path to props] [products page url]");
+			System.exit(1);
+		}
 		
+		new Application().run(args[0],args[1]);
 		
-		String url = "https://jsainsburyplc.github.io/serverside-test/site/www.sainsburys.co.uk/webapp/wcs/stores/servlet/gb/groceries/berries-cherries-currants6039.html";
-		
-		String filePath = "xpath.props";
-		
+			
+	}
+	
+	public void run(String filePath, String url) throws IOException {
+				
 		FileInputStream fis = new FileInputStream(filePath);
 		
 		Properties xpaths = new Properties();
@@ -39,7 +44,9 @@ public class Application {
 		
 		String itemsJsonString  = itemsJson.getItemsAsJsonString();
 	
-		System.out.println(itemsJsonString);				
+		System.out.println(itemsJsonString);		
+		
 	}
+	
 
 }

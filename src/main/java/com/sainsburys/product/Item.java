@@ -2,6 +2,7 @@ package com.sainsburys.product;
 
 import java.math.BigDecimal;
 
+import com.fasterxml.jackson.annotation.JsonRawValue;
 import com.sainsburys.scraper.Scrapeable;
 
 /**
@@ -43,7 +44,8 @@ public class Item implements Scrapeable{
 	public void setKcal_per_100g(int kcal_per_100g) {
 		this.kcal_per_100g = kcal_per_100g;
 	}
-
+	
+	@JsonRawValue
 	public BigDecimal getUnit_price() {
 		return unit_price;
 	}

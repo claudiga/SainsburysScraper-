@@ -69,12 +69,17 @@ public class FetchProductCallable implements Callable<Item> {
 
 		String itemName = productNameAndLink[0];
 		String[] caloriesAndDescription = getCaloriesAndDescription(link);
-
+		
+		
 		HtmlDivision priceDiv = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("priceDivXpath"));
 
+		if(priceDiv == null) {
+			
+			logger.error("Unable to get the price division, make sure the price division exist or is in the props... exiting");
+			throw new UnableToGetItemException("Unable to get the price div");
+		}
 		String unitPrice = priceDiv.asText().split("/")[0].replaceAll("[^0-9.]", "");
 
-		System.out.println(unitPrice);
 
 		Item item = new Item(itemName, Integer.parseInt(caloriesAndDescription[0]), new BigDecimal(unitPrice),
 				caloriesAndDescription[1]);
@@ -88,7 +93,14 @@ public class FetchProductCallable implements Callable<Item> {
 	public String[] getProductNameAndLink(DomElement product) {
 
 		HtmlDivision prodNameAndLink = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("productNameAndLinkDivXpath"));
-
+		
+		if(prodNameAndLink == null) {
+			
+			logger.error("Unable to get the product name and link division, make sure the product name and link division exist or is in the props... exiting");
+			throw new UnableToGetItemException("Unable to get the product name and link division");
+			
+		}
+		
 		HtmlAnchor an = (HtmlAnchor) prodNameAndLink.getFirstByXPath("h3/a");
 		String link = an.getAttribute("href");
 		link = ScraperUtils.getAbsolutePath(url, link);
@@ -104,6 +116,12 @@ public class FetchProductCallable implements Callable<Item> {
 		
 		HtmlDivision info = (HtmlDivision) page.getElementById(xpaths.getProperty("informationDivID"));
 
+		if(info == null) {
+			
+			logger.error("Unable to get the informtion division, make sure the informtion division exist or is in the props... exiting");
+			throw new UnableToGetItemException("Unable to get the informtion division");
+		}
+		
 		Optional<HtmlTable> tableOp = Optional
 				.ofNullable((HtmlTable) info.getFirstByXPath(xpaths.getProperty("NutritionTable")));
 		String calories = "-1";

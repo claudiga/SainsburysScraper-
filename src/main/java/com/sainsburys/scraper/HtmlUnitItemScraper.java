@@ -71,9 +71,20 @@ public class HtmlUnitItemScraper implements ItemScraper<Item> {
 		
 		HtmlDivision productList = (HtmlDivision) page.getElementById(xpaths.getProperty("productListDivID"));
 
+		if(productList == null) {
+			
+			logger.error("Unable to get the product list Division make sure the div holding the product list is correct in props.... exiting");
+			throw new UnableToGetItemException("Unable to get the product list Division");
+		}
+		
 		HtmlUnorderedList prods = (HtmlUnorderedList) productList
 				.getFirstByXPath(xpaths.getProperty("productListXpath"));
-
+		
+		if(prods == null) {
+			
+			logger.error("Unable to get the product list, make sure the product list exist or is in the props... exiting");
+			throw new UnableToGetItemException("Unable to get the product list");
+		}
 		Iterable<DomElement> listOfProds = prods.getChildElements();
 
 		return listOfProds;
@@ -101,6 +112,7 @@ public class HtmlUnitItemScraper implements ItemScraper<Item> {
 		HtmlPage page = getPage(url);
 
 		Iterable<DomElement> listOfProds = getProductList(page);
+		
 
 		ExecutorService executor = Executors.newFixedThreadPool(10);
 		List<Future<Item>> results = new ArrayList<Future<Item>>();
@@ -112,7 +124,12 @@ public class HtmlUnitItemScraper implements ItemScraper<Item> {
 			results.add(reference);
 
 		});
-
+		
+		if(results.isEmpty()) {
+			
+			logger.info("No items found... ");
+		}
+		
 		for (Future<Item> itemFuture : results) {
 
 			try {

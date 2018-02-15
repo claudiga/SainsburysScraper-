@@ -9,6 +9,7 @@ import static org.mockito.Mockito.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.math.BigDecimal;
 import java.net.MalformedURLException;
 import java.util.Iterator;
 import java.util.List;
@@ -75,9 +76,9 @@ public class TestScraper {
 
 		JSONItems js = new JSONItems(items);
 
-		String total = js.getTotalAsString();
+		BigDecimal total = js.getTotal();
 
-		assertEquals("5.00", total);
+		assertEquals("5.00", total.toPlainString());
 
 	}
 
@@ -85,16 +86,15 @@ public class TestScraper {
 	@Test(expected = UnableToGetItemException.class)
 	public void testXpath() throws FailingHttpStatusCodeException, MalformedURLException, IOException {
 
-		String url = "file:///Users/claude/eclipse-workspace/webscraper/items_page.html";
 
 		FileInputStream fis = new FileInputStream("badXpath.props");
 		Properties props = new Properties();
 
 		props.load(fis);
 
-		HtmlUnitItemScraper ws = new HtmlUnitItemScraper(url, props);
+		HtmlUnitItemScraper ws = new HtmlUnitItemScraper(itemsPageurl, props);
 
-		HtmlPage itemsPage = webClient.getPage(url);
+		HtmlPage itemsPage = webClient.getPage(itemsPageurl);
 
 		ws.getProductList(itemsPage);
 

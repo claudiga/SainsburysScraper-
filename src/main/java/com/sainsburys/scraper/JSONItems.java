@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.fasterxml.jackson.databind.util.RawValue;
 import com.sainsburys.product.Item;
 
 public class JSONItems {
@@ -24,7 +25,7 @@ public class JSONItems {
 
 	}
 
-	public String getTotalAsString() {
+	public BigDecimal getTotal() {
 
 		BigDecimal total = items.stream().map(Item::getUnit_price).reduce((e, y) -> {
 
@@ -34,7 +35,7 @@ public class JSONItems {
 
 		total.setScale(2, RoundingMode.HALF_EVEN);
 
-		return total.toPlainString();
+		return total;
 
 	}
 
@@ -43,14 +44,17 @@ public class JSONItems {
 		ObjectNode obectNode = new ObjectNode(nodeFactory);
 		JsonNode itemsNode = null;
 		String output = null;
-		String total = getTotalAsString();
+		BigDecimal total = getTotal();
 		try {
 			itemsNode = mapper.valueToTree(items);
 
 			obectNode.set("results", itemsNode);
-
-			obectNode.put("total", total);
-
+			
+			RawValue rv = new RawValue(total.toPlainString());
+			
+			obectNode.putRawValue("total", rv);
+			
+			
 			output = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(obectNode);
 
 		} catch (JsonProcessingException e) {
