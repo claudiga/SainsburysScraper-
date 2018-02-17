@@ -1,6 +1,5 @@
 package com.sainsburys.scraper;
 
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -10,7 +9,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.Predicate;
-
 import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
@@ -19,48 +17,48 @@ import org.slf4j.LoggerFactory;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlDivision;
-
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-
 import com.gargoylesoftware.htmlunit.html.HtmlUnorderedList;
 import com.sainsburys.exceptions.UnableToGetItemException;
 import com.sainsburys.product.Item;
 
-public class HtmlUnitItemScraper implements ItemScraper<Item> {
+public class Items{
+	
+	
 
 	private final static Logger logger = LoggerFactory.getLogger(HtmlUnitItemScraper.class);
 	private final String url;
 	private final WebClient webClient;
-	
 	Properties xpaths;
+
+
+	List<Itemm> items;
 	
-	public HtmlUnitItemScraper(String url, Properties xpaths) {
+	public Items(String url, Properties xpaths) {
+		this.items = new ArrayList<Itemm>();
 		this.webClient = new WebClient();
 		this.webClient.getOptions().setThrowExceptionOnScriptError(false);
 		this.webClient.getOptions().setThrowExceptionOnFailingStatusCode(false);
 		this.url = url;
 		this.xpaths = xpaths;
-
+		
+		
 	}
-
 	
-	public HtmlPage getPage(String url) {
-
-		HtmlPage page = null;
-		try {
-			page = webClient.getPage(url);
-		} catch (Exception e) {
-			logger.warn(String.format("unable to load the page at: %s ", url));
-			throw new UnableToGetItemException("Unable to load page");
-
-		}
-
-		webClient.close();
-
-		return page;
-
+	public void visit() {
+		
+		
 	}
-
+	
+	public void getItems() {
+		HtmlPage page = getPage(this.url);
+		
+		this.items = getProductListings();
+		
+		
+	}
+	
+	
 	public Iterable<DomElement> getProductList(HtmlPage page) {
 		
 		if(!checkXpath()) {
@@ -89,9 +87,6 @@ public class HtmlUnitItemScraper implements ItemScraper<Item> {
 		return listOfProds;
 	}
 	
-	/**
-	 * better to fail fast then fail later when we realise a property thats needed doesn't exist
-	 */
 	public boolean checkXpath() {
 		
 		Predicate<String> p = xpaths::containsKey;
@@ -102,18 +97,73 @@ public class HtmlUnitItemScraper implements ItemScraper<Item> {
 		
 		return properties.size() == size;
 	}
-	/**
-	 * We split up the work so that if one item fails to be scraped for some reason we can
-	 * return partial list of items if its acceptable.
-	 */
+	
+	public HtmlPage getPage(String url) {
 
+		HtmlPage page = null;
+		try {
+			page = webClient.getPage(url);
+		} catch (Exception e) {
+			logger.warn(String.format("unable to load the page at: %s ", url));
+			throw new UnableToGetItemException("Unable to load page");
 
-	@Override
-	public List<Item> getProductListings() {
-		// TODO Auto-generated method stub
-		return null;
+		}
+
+		webClient.close();
+
+		return page;
+
 	}
 	
+	public List<Itemm> getProductListings() {
 
+		ArrayList<Itemm> items = new ArrayList<>();
+		HtmlPage page = getPage(url);
 
+		Iterable<DomElement> listOfProds = getProductList(page);
+		
+
+		ExecutorService executor = Executors.newFixedThreadPool(5);
+		List<Future<Itemm>> results = new ArrayList<Future<Itemm>>();
+
+		listOfProds.forEach(product -> {
+
+			Future<Itemm> reference = executor.submit(new FetchProductCallable(product, url, xpaths));
+
+			results.add(reference);
+
+		});
+		
+		if(results.isEmpty()) {
+			
+			logger.info("No items found... ");
+		}
+		
+		for (Future<Itemm> itemFuture : results) {
+
+			try {
+
+				Itemm it = itemFuture.get();
+				items.add(it);
+			} catch (InterruptedException | ExecutionException e) {
+
+				e.printStackTrace();
+			}
+
+		}
+		
+		executor.shutdown();
+		while(!executor.isTerminated()) {
+			
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException ignored) {
+
+			}
+			executor.shutdownNow();
+		}
+
+		return items;
+	}
+	
 }

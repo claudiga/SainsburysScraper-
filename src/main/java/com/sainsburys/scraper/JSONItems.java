@@ -16,13 +16,12 @@ public class JSONItems {
 
 	final private ObjectMapper mapper;
 	final private JsonNodeFactory nodeFactory;
-
-	List<Item> items;
+	private List<Item> items;
 
 	public JSONItems(List<Item> items) {
 		this.mapper = new ObjectMapper();
 		this.items = items;
-		nodeFactory = JsonNodeFactory.instance;
+		this.nodeFactory = JsonNodeFactory.instance;
 
 	}
 
@@ -49,19 +48,19 @@ public class JSONItems {
 		try {
 			itemsNode = mapper.valueToTree(items);
 			
-			Iterator<JsonNode> it = itemsNode.iterator();
+			Iterator<JsonNode> itemsIterator = itemsNode.iterator();
 			
-			while(it.hasNext()) {
+			while(itemsIterator.hasNext()) {
 				
-				JsonNode j = it.next();
+				JsonNode itemNode = itemsIterator.next();
 				
-				JsonNode k = j.get("kcal_per_100g");
+				JsonNode k = itemNode.get("kcal_per_100g");
 						
 				if(k.intValue() == -1) {
 					
-					ObjectNode o = (ObjectNode) j;
+					ObjectNode itemObjectNode = (ObjectNode) itemNode;
 					
-					o.remove("kcal_per_100g");
+					itemObjectNode.remove("kcal_per_100g");
 				}
 				
 			}

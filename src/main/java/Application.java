@@ -1,4 +1,5 @@
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
@@ -9,10 +10,12 @@ import com.sainsburys.product.Item;
 import com.sainsburys.scraper.JSONItems;
 import com.sainsburys.scraper.HtmlUnitItemScraper;
 import com.sainsburys.scraper.ItemScraper;
+import com.sainsburys.scraper.Itemm;
+import com.sainsburys.scraper.Items;
 
 public class Application {
 	
-	private final static Logger logger = LoggerFactory.getLogger(HtmlUnitItemScraper.class);
+	private final static Logger logger = LoggerFactory.getLogger(Application.class);
 
 
 	public static void main(String[] args) throws IOException {
@@ -23,7 +26,7 @@ public class Application {
 			System.exit(1);
 		}
 		
-		new Application().run(args[0],args[1]);
+		new Application().visit(args[0],args[1]);
 		
 			
 	}
@@ -45,6 +48,23 @@ public class Application {
 		String itemsJsonString  = itemsJson.getItemsAsJsonString();
 	
 		System.out.println(itemsJsonString);		
+		
+	}
+	
+	
+	public void visit(String filePath, String url) throws IOException {
+		
+FileInputStream fis = new FileInputStream(filePath);
+		
+		Properties xpaths = new Properties();
+		
+		xpaths.load(fis);
+		
+		Items items = new Items(url, xpaths);
+		
+		List<Itemm> itemss = items.getProductListings();
+		
+		System.out.println(itemss);
 		
 	}
 	

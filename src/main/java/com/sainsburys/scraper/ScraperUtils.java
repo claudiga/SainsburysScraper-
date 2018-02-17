@@ -17,7 +17,7 @@ public class ScraperUtils {
 
 		energyKcal = energyKcal.setScale(0, RoundingMode.HALF_EVEN);
 
-		return energyKcal.toEngineeringString();
+		return energyKcal.toPlainString();
 	};
     
 	public static String getAbsolutePath(String currentPath,String relativePath) {
@@ -28,7 +28,10 @@ public class ScraperUtils {
 		String[] fPath = currentPath.split("(?<!/)/(?!/)");
 		int hops = (int) Arrays.asList(rPath).stream().filter(path -> {return path.equals("..");}).count();
 
-		
+		if(hops < 1) {
+			return relativePath;
+			
+		}
 		
 		int si = fPath.length-hops;
 		

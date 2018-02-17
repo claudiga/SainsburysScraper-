@@ -18,7 +18,7 @@ import com.gargoylesoftware.htmlunit.html.HtmlTableRow;
 import com.sainsburys.exceptions.UnableToGetItemException;
 import com.sainsburys.product.Item;
 
-public class FetchProductCallable implements Callable<Item> {
+public class FetchProductCallable implements Callable<Itemm> {
 	
 	private final static Logger logger = LoggerFactory.getLogger(FetchProductCallable.class);
 	
@@ -26,6 +26,7 @@ public class FetchProductCallable implements Callable<Item> {
 		WebClient webClient;
 		String url;
 		Properties xpaths;
+		Itemm item;
 		
 		
 	public FetchProductCallable(DomElement product, String url, Properties xpaths) {
@@ -36,6 +37,7 @@ public class FetchProductCallable implements Callable<Item> {
 		this.product = product;
 		this.url = url;
 		this.xpaths = xpaths;
+		this.item = new Itemm(product, xpaths, url);
 	}
 	
 	/**
@@ -61,105 +63,15 @@ public class FetchProductCallable implements Callable<Item> {
 	}
 
 	@Override
-	public Item call() throws Exception {
-	
-		String[] productNameAndLink = getProductNameAndLink(product);
+	public Itemm call() throws Exception {
 
-		String link = productNameAndLink[1];
-
-		String itemName = productNameAndLink[0];
-		String[] caloriesAndDescription = getCaloriesAndDescription(link);
+		this.item.getFields();
 		
+		this.item.visit();
 		
-		HtmlDivision priceDiv = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("priceDivXpath"));
-
-		if(priceDiv == null) {
-			
-			logger.error("Unable to get the price division, make sure the price division exist or is in the props... exiting");
-			throw new UnableToGetItemException("Unable to get the price div");
-		}
-		String unitPrice = priceDiv.asText().split("/")[0].replaceAll("[^0-9.]", "");
-
-
-		Item item = new Item(itemName, Integer.parseInt(caloriesAndDescription[0]), new BigDecimal(unitPrice),
-				caloriesAndDescription[1]);
-		
-		return item;
+		return this.item;
 		
 	}
 	
-	
-
-	public String[] getProductNameAndLink(DomElement product) {
-
-		HtmlDivision prodNameAndLink = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("productNameAndLinkDivXpath"));
-		
-		if(prodNameAndLink == null) {
-			
-			logger.error("Unable to get the product name and link division, make sure the product name and link division exist or is in the props... exiting");
-			throw new UnableToGetItemException("Unable to get the product name and link division");
-			
-		}
-		
-		HtmlAnchor an = (HtmlAnchor) prodNameAndLink.getFirstByXPath("h3/a");
-		String link = an.getAttribute("href");
-		link = ScraperUtils.getAbsolutePath(url, link);
-		String itemName = an.asText();
-
-		return new String[] { itemName, link };
-	}
-	
-	//@Override
-	public String[] getCaloriesAndDescription(String url) {
-
-		HtmlPage page = getPage(url);
-		
-		HtmlDivision info = (HtmlDivision) page.getElementById(xpaths.getProperty("informationDivID"));
-
-		if(info == null) {
-			
-			logger.error("Unable to get the informtion division, make sure the informtion division exist or is in the props... exiting");
-			throw new UnableToGetItemException("Unable to get the informtion division");
-		}
-		
-		Optional<HtmlTable> tableOp = Optional
-				.ofNullable((HtmlTable) info.getFirstByXPath(xpaths.getProperty("NutritionTable")));
-		String calories = "-1";
-
-		HtmlDivision description = (HtmlDivision) info
-				.getFirstByXPath(xpaths.getProperty("descriptionDivXpath"));
-
-		description = Optional.ofNullable(description).orElse((HtmlDivision) info.getFirstByXPath(
-				"//*/div[@id='mainPart']/div[contains(@class,'itemTypeGroupContainer productText')]/div[contains(@class,'memo')]"));
-		if (description == null) {
-			description = info.getFirstByXPath(
-					"//*/div[@id='mainPart']/div[contains(@class,'itemTypeGroupContainer productText')]/div[contains(@class,'itemTypeGroup')]");
-		}
-
-		if (tableOp.isPresent()) {
-			HtmlTable nutritionTable = tableOp.get();
-			HtmlTableRow tr = (HtmlTableRow) nutritionTable.getFirstByXPath(xpaths.getProperty("energyTableRowXpath"));
-			String energy_per_kg = tr.getElementsByTagName("td").get(0).asText().replaceAll("[^0-9]", "");
-			calories = ScraperUtils.kjToKcal.apply(energy_per_kg);
-		} else {
-			logger.info(String.format("Nutritional value for item at URL: %s is missing", url));
-		}
-		String descrip = "";
-		String lineDescription = null;
-
-		if (description != null) {
-			descrip = description.asText();
-			lineDescription = descrip.split("\n")[0];
-
-		} else {
-
-			logger.info(String.format("Description for item at URL: %s is missing.... Defaulting to empty string", url));
-
-		}
-		
-
-		return new String[] { calories, lineDescription };
-
-	}
 
 }
