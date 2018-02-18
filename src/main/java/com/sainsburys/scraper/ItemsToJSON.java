@@ -12,13 +12,13 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import com.fasterxml.jackson.databind.util.RawValue;
 import com.sainsburys.product.Item;
 
-public class JSONItems {
+public class ItemsToJSON {
 
 	final private ObjectMapper mapper;
 	final private JsonNodeFactory nodeFactory;
 	private List<Item> items;
 
-	public JSONItems(List<Item> items) {
+	public ItemsToJSON(List<Item> items) {
 		this.mapper = new ObjectMapper();
 		this.items = items;
 		this.nodeFactory = JsonNodeFactory.instance;

@@ -27,8 +27,10 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.sainsburys.exceptions.UnableToGetItemException;
 import com.sainsburys.product.Item;
 import com.sainsburys.scraper.FetchProductCallable;
-import com.sainsburys.scraper.JSONItems;
+import com.sainsburys.scraper.ItemsToJSON;
 import com.sainsburys.scraper.HtmlUnitItemScraper;
+import com.sainsburys.scraper.ItemFieldVisitor;
+import com.sainsburys.scraper.ItemJsonFieldVisitor;
 
 public class TestScraper {
 
@@ -41,7 +43,7 @@ public class TestScraper {
 	public void setup() throws JsonParseException, JsonMappingException, IOException {
 		
 		
-		File itemRelativePath = new File("items_page.html"); 
+		File itemRelativePath = new File("test_files/items_page.html"); 
 		
 		 itemsPageurl = "file:///"+itemRelativePath.getAbsolutePath();
 		 
@@ -74,7 +76,7 @@ public class TestScraper {
 
 		List<Item> items = scraper.getProductListings();
 
-		JSONItems js = new JSONItems(items);
+		ItemsToJSON js = new ItemsToJSON(items);
 
 		BigDecimal total = js.getTotal();
 		
@@ -87,12 +89,13 @@ public class TestScraper {
 	public void testXpath() throws FailingHttpStatusCodeException, MalformedURLException, IOException {
 
 
-		FileInputStream fis = new FileInputStream("badXpath.props");
+		FileInputStream fis = new FileInputStream("test_files/badXpath.props");
 		Properties props = new Properties();
 
 		props.load(fis);
+		ItemFieldVisitor visitor = new ItemJsonFieldVisitor();
 
-		HtmlUnitItemScraper ws = new HtmlUnitItemScraper(itemsPageurl, props);
+		HtmlUnitItemScraper ws = new HtmlUnitItemScraper(itemsPageurl, props,visitor);
 
 		HtmlPage itemsPage = webClient.getPage(itemsPageurl);
 
@@ -106,14 +109,16 @@ public class TestScraper {
 		
 		
 		
-		String url = "";
 
-		FileInputStream fis = new FileInputStream("xpath.props");
+		FileInputStream fis = new FileInputStream("config/xpath.props");
 		Properties props = new Properties();
 
 		props.load(fis);
+		
+		ItemFieldVisitor visitor = new ItemJsonFieldVisitor();
 
-		HtmlUnitItemScraper ws = new HtmlUnitItemScraper(itemsPageurl, props);
+
+		HtmlUnitItemScraper ws = new HtmlUnitItemScraper(itemsPageurl, props,visitor);
 
 		HtmlPage page = webClient.getPage(itemsPageurl);
 
@@ -127,7 +132,7 @@ public class TestScraper {
 			item_7555699 = prodIterator.next();
 		}
 
-		FetchProductCallable prod = new FetchProductCallable(item_7555699, url, props);
+		FetchProductCallable prod = new FetchProductCallable(item_7555699, itemsPageurl, props,visitor);
 
 		Item item = prod.call();
 

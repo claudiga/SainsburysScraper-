@@ -1,4 +1,4 @@
-package com.sainsburys.scraper;
+package com.sainsburys.fields;
 
 import java.util.Optional;
 import java.util.Properties;
@@ -13,6 +13,9 @@ import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.html.HtmlTable;
 import com.gargoylesoftware.htmlunit.html.HtmlTableRow;
 import com.sainsburys.exceptions.UnableToGetItemException;
+import com.sainsburys.scraper.ItemField;
+import com.sainsburys.scraper.ItemFieldVisitor;
+import com.sainsburys.scraper.ScraperUtils;
 
 public class CaloriesPer100g implements ItemField {
 	
@@ -29,10 +32,9 @@ public class CaloriesPer100g implements ItemField {
 		this.itemPage = itemPage;
 	}
 
-	@Override
-	public String getField(DomElement product) {
+	public int getField(DomElement product) {
 		
-		String calories = getCalories();
+		int calories = getCalories();
 		
 		return calories;
 	}
@@ -40,7 +42,7 @@ public class CaloriesPer100g implements ItemField {
 	
 	
 	
-	public String getCalories() {
+	public int getCalories() {
 
 		
 		HtmlDivision info = (HtmlDivision) itemPage.getElementById(xpaths.getProperty("informationDivID"));
@@ -65,8 +67,14 @@ public class CaloriesPer100g implements ItemField {
 			logger.info(String.format("Nutritional value for item at URL: %s is missing...kcal_per_100g field has been omitted", itemPage.getBaseURL()));
 		}
 
-		return calories;
+		return Integer.parseInt(calories);
 
+	}
+
+	@Override
+	public void accept(ItemFieldVisitor visitor) {
+
+		visitor.visit(this);
 	}
 	
 }

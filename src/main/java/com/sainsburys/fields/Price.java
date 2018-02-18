@@ -1,5 +1,6 @@
-package com.sainsburys.scraper;
+package com.sainsburys.fields;
 
+import java.math.BigDecimal;
 import java.util.Properties;
 
 import org.slf4j.Logger;
@@ -8,6 +9,8 @@ import org.slf4j.LoggerFactory;
 import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlDivision;
 import com.sainsburys.exceptions.UnableToGetItemException;
+import com.sainsburys.scraper.ItemField;
+import com.sainsburys.scraper.ItemFieldVisitor;
 
 public class Price implements ItemField {
 
@@ -18,10 +21,11 @@ public class Price implements ItemField {
 	public Price(DomElement product, Properties xpaths) {
 
 		this.product = product;
+		this.xpaths = xpaths;
 
 	}
 
-	public String getUnitPrice() {
+	public BigDecimal getUnitPrice() {
 
 		HtmlDivision priceDiv = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("priceDivXpath"));
 
@@ -33,14 +37,20 @@ public class Price implements ItemField {
 		}
 		String unitPrice = priceDiv.asText().split("/")[0].replaceAll("[^0-9.]", "");
 
-		return unitPrice;
+		return new BigDecimal(unitPrice);
 	}
 
-	@Override
-	public String getField(DomElement product) {
-		String unitPrice = getUnitPrice();
+	
+	public BigDecimal getField(DomElement product) {
+		BigDecimal unitPrice = getUnitPrice();
 
 		return unitPrice;
+	}
+	
+	@Override
+	public void accept(ItemFieldVisitor visitor) {
+
+		visitor.visit(this);
 	}
 
 }

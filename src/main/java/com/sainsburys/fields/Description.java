@@ -1,4 +1,4 @@
-package com.sainsburys.scraper;
+package com.sainsburys.fields;
 
 import java.util.Optional;
 import java.util.Properties;
@@ -9,9 +9,9 @@ import org.slf4j.LoggerFactory;
 import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlDivision;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.gargoylesoftware.htmlunit.html.HtmlTable;
-import com.gargoylesoftware.htmlunit.html.HtmlTableRow;
 import com.sainsburys.exceptions.UnableToGetItemException;
+import com.sainsburys.scraper.ItemField;
+import com.sainsburys.scraper.ItemFieldVisitor;
 
 public class Description implements ItemField{
 	
@@ -28,7 +28,6 @@ public class Description implements ItemField{
 		this.itemPage = itemPage;
 	}
 
-	@Override
 	public String getField(DomElement product) {
 
 		String description = getDescription();
@@ -76,6 +75,12 @@ public class Description implements ItemField{
 
 		return lineDescription ;
 
+	}
+	
+	@Override
+	public void accept(ItemFieldVisitor visitor) {
+
+		visitor.visit(this);
 	}
 
 }

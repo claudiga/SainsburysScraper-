@@ -1,4 +1,4 @@
-package com.sainsburys.scraper;
+package com.sainsburys.fields;
 
 import java.util.Properties;
 
@@ -9,6 +9,8 @@ import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlDivision;
 import com.sainsburys.exceptions.UnableToGetItemException;
+import com.sainsburys.scraper.ItemField;
+import com.sainsburys.scraper.ItemFieldVisitor;
 
 public class Title implements ItemField{
 	
@@ -23,17 +25,16 @@ public class Title implements ItemField{
 		this.xpaths = xpaths;
 	}
 	
-	@Override
-	public String getField(DomElement product) {
+	public String getField() {
 		
 		
-		String title = getProductTitle(product);
+		String title = getProductTitle();
 		
 		return title;
 		
 	}
 	
-	public String getProductTitle(DomElement product) {
+	public String getProductTitle() {
 
 		HtmlDivision prodNameAndLink = (HtmlDivision) product.getFirstByXPath(xpaths.getProperty("productNameAndLinkDivXpath"));
 		
@@ -48,6 +49,12 @@ public class Title implements ItemField{
 		String title = an.asText();
 
 		return title;
+	}
+	
+	@Override
+	public void accept(ItemFieldVisitor visitor) {
+
+		visitor.visit(this);
 	}
 
 }

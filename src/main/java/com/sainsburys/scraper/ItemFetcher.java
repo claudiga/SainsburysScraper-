@@ -1,16 +1,10 @@
 package com.sainsburys.scraper;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
+
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
-import java.util.concurrent.Callable;
-import java.util.function.Predicate;
-import java.util.stream.Collectors;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,24 +13,28 @@ import com.gargoylesoftware.htmlunit.html.DomElement;
 import com.gargoylesoftware.htmlunit.html.HtmlAnchor;
 import com.gargoylesoftware.htmlunit.html.HtmlDivision;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
-import com.gargoylesoftware.htmlunit.html.HtmlUnorderedList;
 import com.sainsburys.exceptions.UnableToGetItemException;
+import com.sainsburys.fields.CaloriesPer100g;
+import com.sainsburys.fields.Description;
+import com.sainsburys.fields.Price;
+import com.sainsburys.fields.Title;
+
 import static com.sainsburys.scraper.Fields.*;
-public class Itemm {
+public class ItemFetcher {
 	
 	
 
 	private final static Logger logger = LoggerFactory.getLogger(HtmlUnitItemScraper.class);
 	private final WebClient webClient;
 	private DomElement product;
-	String mainPageUrl;
-	Properties xpaths;
+	private String mainPageUrl;
+	private Properties xpaths;
 
 
 	Map<String,ItemField> fields;
 	
-	public Itemm(DomElement product, Properties xpaths, String mainPageUrl) {
-		this.fields = new HashMap<String,ItemField>();
+	public ItemFetcher(DomElement product, Properties xpaths, String mainPageUrl) {
+		this.fields = new LinkedHashMap<String,ItemField>();
 		this.webClient = new WebClient();
 		this.webClient.getOptions().setThrowExceptionOnScriptError(false);
 		this.webClient.getOptions().setThrowExceptionOnFailingStatusCode(false);
@@ -56,18 +54,15 @@ public class Itemm {
 		
 		ItemField description = new Description(product, xpaths,itemPage);
 		
-		ItemField unit_price = new Description(product, xpaths,itemPage);
+		ItemField unit_price = new Price(product, xpaths);
 
 		
-		
-				
+		fields.put(DESCRIPTION.toString(), description);
+		fields.put(UNIT_PRICE.toString(), unit_price);		
+		fields.put(KCAL_PER_100G.toString(), kcal_per_100kg);
 		fields.put(TITLE.toString(), title);
-		fields.put(KCAL_PER_100G.name(), kcal_per_100kg);
-		fields.put(DESCRIPTION.name(), description);
-		fields.put(UNIT_PRICE.name(), unit_price);
-		
-		
-		
+
+	
 	}
 	
 	public HtmlPage getPage(String url) {
@@ -106,23 +101,23 @@ public class Itemm {
 		return  link ;
 	}
 
-	public void visit() {
+	public void accept(ItemFieldVisitor visitor) {
 		
-	Set<String> itemFields  =fields.keySet();
-	
-	itemFields.stream().forEach(key ->{
+		Set<String> itemFields  =fields.keySet();
 		
-		System.out.println(fields.get(key));
+		itemFields.stream().forEach(key ->{
+			
+			ItemField field =fields.get(key);
+			
+			field.accept(visitor);
+			
+		});
 		
-	});
 		
-	System.out.println("_________________");
+		
 	}
 	
-	public Itemm call()  {
+	
 
-		return this;
-	}
-	
 	
 }
